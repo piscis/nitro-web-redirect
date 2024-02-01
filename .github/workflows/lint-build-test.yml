@@ -12,12 +12,12 @@ on:
 jobs:
 
   lint:
-    timeout-minutes: 5
+    timeout-minutes: 3
     name: Lint ✅
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./configure-node.yml
+      - uses: ./.github/actions/setup-node
       - name: Lint App
         shell: bash
         run: |
@@ -26,11 +26,11 @@ jobs:
 
   test:
     name: Test 🧪
-    timeout-minutes: 5
+    timeout-minutes: 3
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./configure-node.yml
+      - uses: ./.github/actions/setup-node
       - name: Test App
         shell: bash
         run: |
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./configure-node.yml
+      - uses: ./.github/actions/setup-node
       - name: Build App
         shell: bash
         run: |
