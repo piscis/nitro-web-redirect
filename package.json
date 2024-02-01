@@ -18,7 +18,6 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest",
     "test:run": "vitest --run",
-    "test:types": "tsc --noEmit",
     "release:patch": "release-it -i patch --only-version",
     "release:minor": "release-it -i minor --only-version",
     "release:major": "release-it -i major --only-version"
