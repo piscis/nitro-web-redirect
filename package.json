@@ -11,6 +11,7 @@
     "start": "node .output/server/index.mjs",
     "prepare": "nitropack prepare",
     "dev": "nitropack dev",
+    "test": "nitropack build",
     "build": "nitropack build",
     "preview": "node .output/server/index.mjs",
     "lint": "eslint .",
