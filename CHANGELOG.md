@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/piscis/nitro-web-redirect/compare/v1.1.1...v1.1.2) (2024-02-01)
+
+
+### Bug Fixes
+
+* fixes a typo in README.md ([1de2cd7](https://github.com/piscis/nitro-web-redirect/commit/1de2cd7786de2698b933a3e9183fec2e0192f7ee))
+
 ## [1.1.1](https://github.com/piscis/nitro-web-redirect/compare/v1.1.0...v1.1.1) (2024-02-01)
 
 
