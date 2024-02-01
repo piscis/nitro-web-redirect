@@ -1,0 +1,29 @@
+{
+  "name": "nitro-web-redirect",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.8.0",
+  "engines": {
+    "node": "20.x",
+    "pnpm": "8.x"
+  },
+  "scripts": {
+    "start": "node .output/server/index.mjs",
+    "prepare": "nitropack prepare",
+    "dev": "nitropack dev",
+    "build": "nitropack build",
+    "preview": "node .output/server/index.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release:patch": "release-it -i patch --only-version",
+    "release:minor": "release-it -i minor --only-version",
+    "release:major": "release-it -i major --only-version"
+  },
+  "dependencies": {
+    "nitropack": "latest"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
+    "release-it": "^17.0.3"
+  }
+}
