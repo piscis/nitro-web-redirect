@@ -60,7 +60,7 @@ docker run \
   -p 3000:3000 $(docker build -q .)
 ```
 
-## Use prebuild image from Docker Hub
+## Use pre-build image from Docker Hub
 
 ```bash
 piscis/nitro-web-redirect:latest
