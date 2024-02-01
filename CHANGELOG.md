@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.2.1](https://github.com/piscis/nitro-web-redirect/compare/v1.2.0...v1.2.1) (2024-02-01)
+
 ## [1.2.0](https://github.com/piscis/nitro-web-redirect/compare/v1.1.2...v1.2.0) (2024-02-01)
 
 
