@@ -7,7 +7,8 @@ Look at the [Nitro documentation](https://nitro.unjs.io/) to learn more.
 Make sure environment variables are set, via `.env` file or environment:
 
 ```bash
-REDIRECT_TARGET='https://example.com'
+REDIRECT_TARGET='https://example.com' # will redirect to the target url rewrite the request protocol to https
+REDIRECT_TARGET='example.com' # will prefix the request protocol (http/https) to the target url
 REDIRECT_STATUS_CODE=302
 ```
 
@@ -57,4 +58,10 @@ docker run \
   -e REDIRECT_TARGET=https://example.com \
   -e REDIRECT_STATUS_CODE=302 \
   -p 3000:3000 $(docker build -q .)
+```
+
+## Use prebuild image from Docker Hub
+
+```bash
+piscis/nitro-web-redirect:latest
 ```
