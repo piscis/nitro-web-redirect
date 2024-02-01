@@ -10,12 +10,10 @@ import {
   createDevServer,
   createNitro,
   prepare,
-  prerender
+  prerender,
 } from 'nitropack'
 import type { Listener } from 'listhen'
 import type { Nitro } from 'nitropack'
-
-import dotenv from 'dotenv'
 
 export interface Context {
   preset: string
@@ -28,12 +26,12 @@ export interface Context {
 
 const rootDir = fileURLToPath(new URL('../../', import.meta.url))
 
-export async function setupContext ({ preset = 'node' } = {}) {
+export async function setupContext({ preset = 'node' } = {}) {
   const ctx: Context = {
     preset,
     isDev: preset === 'nitro-dev',
     rootDir,
-    outDir: resolve(rootDir, '.output')
+    outDir: resolve(rootDir, '.output'),
   }
 
   const nitro = (ctx.nitro = await createNitro({
@@ -42,18 +40,18 @@ export async function setupContext ({ preset = 'node' } = {}) {
     rootDir: ctx.rootDir,
     buildDir: resolve(ctx.outDir, '.nitro'),
     serveStatic:
-      preset !== 'cloudflare' &&
-      preset !== 'cloudflare-module' &&
-      preset !== 'cloudflare-pages' &&
-      preset !== 'vercel-edge' &&
-      !ctx.isDev,
+      preset !== 'cloudflare'
+      && preset !== 'cloudflare-module'
+      && preset !== 'cloudflare-pages'
+      && preset !== 'vercel-edge'
+      && !ctx.isDev,
     output: {
-      dir: ctx.outDir
+      dir: ctx.outDir,
     },
     timing:
-      preset !== 'cloudflare' &&
-      preset !== 'cloudflare-pages' &&
-      preset !== 'vercel-edge'
+      preset !== 'cloudflare'
+      && preset !== 'cloudflare-pages'
+      && preset !== 'vercel-edge',
   }))
 
   if (ctx.isDev) {
@@ -66,7 +64,8 @@ export async function setupContext ({ preset = 'node' } = {}) {
     })
     await build(ctx.nitro)
     await ready
-  } else {
+  }
+  else {
     // Production build
     await prepare(nitro)
     await copyPublicAssets(nitro)
@@ -77,33 +76,35 @@ export async function setupContext ({ preset = 'node' } = {}) {
   return ctx
 }
 
-export async function startServer (ctx: Context) {
+export async function startServer(ctx: Context) {
   const entryPath = resolve(ctx.outDir, 'server/index.mjs')
   const { listener } = await import(entryPath)
   ctx.server = await listen(listener)
-  // eslint-disable-next-line no-console
+
   // console.log('>', ctx.server!.url)
 
   return async function () {
-    if (ctx.server) { await ctx.server.close() }
-    if (ctx.nitro) { await ctx.nitro.close() }
+    if (ctx.server)
+      await ctx.server.close()
+    if (ctx.nitro)
+      await ctx.nitro.close()
   }
 }
 
-export async function callHandler (serverUrl: string, url: string, init?: RequestInit) {
+export async function callHandler(serverUrl: string, url: string, init?: RequestInit) {
   const result = await fetch(joinURL(serverUrl, url), {
     ...init,
     redirect: 'manual',
     headers: {
       // Enforce JSON response when routes fail
       accept: 'application/json',
-      ...init?.headers
-    }
+      ...init?.headers,
+    },
   })
 
   return {
     data: destr(await result.text()),
     status: result.status,
-    headers: Object.fromEntries(result.headers.entries())
+    headers: Object.fromEntries(result.headers.entries()),
   }
 }
