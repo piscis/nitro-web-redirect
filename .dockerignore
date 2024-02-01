@@ -1,0 +1,6 @@
+.nitro
+.output
+node_modules
+.git
+.gitignore
+*.md
