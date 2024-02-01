@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/piscis/nitro-web-redirect/compare/v1.1.2...v1.2.0) (2024-02-01)
+
+
+### Features
+
+* Add unit-tests ([#1](https://github.com/piscis/nitro-web-redirect/issues/1)) ([ff28257](https://github.com/piscis/nitro-web-redirect/commit/ff28257f19d76b3f356603a8ac2c4695f9051d30))
+* reformat readme.md ([be72eb8](https://github.com/piscis/nitro-web-redirect/commit/be72eb849585a27c5e09c12fcfd1018683aed426))
+
 ## [1.1.2](https://github.com/piscis/nitro-web-redirect/compare/v1.1.1...v1.1.2) (2024-02-01)
 
 
