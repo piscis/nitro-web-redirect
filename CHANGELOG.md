@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/piscis/nitro-web-redirect/compare/v1.1.0...v1.1.1) (2024-02-01)
+
+
+### Features
+
+* extend documentation ([e9d485f](https://github.com/piscis/nitro-web-redirect/commit/e9d485f1046ab7feba12cc8915c73e65ca5ec6d5))
+
 ## [1.1.0](https://github.com/piscis/nitro-web-redirect/compare/v1.0.3...v1.1.0) (2024-02-01)
 
 
