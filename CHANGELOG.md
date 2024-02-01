@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/piscis/nitro-web-redirect/compare/v1.0.3...v1.1.0) (2024-02-01)
+
+
+### Features
+
+* add fallback for missing protocol config ([0c629cb](https://github.com/piscis/nitro-web-redirect/commit/0c629cb73e8f81b64bfee33281620b7f1018a684))
+
 ## [1.0.3](https://github.com/piscis/nitro-web-redirect/compare/v1.0.2...v1.0.3) (2024-02-01)
 
 ## [1.0.2](https://github.com/piscis/nitro-web-redirect/compare/v1.0.1...v1.0.2) (2024-02-01)
