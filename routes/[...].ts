@@ -4,8 +4,7 @@ const {
 } = process.env
 
 export default eventHandler((event) => {
-
-  if(!REDIRECT_TARGET) {
+  if (!REDIRECT_TARGET) {
     setResponseHeader(event, 'Content-Type', 'application/json')
     return sendError(event, createError({
       statusCode: 400,
@@ -13,9 +12,9 @@ export default eventHandler((event) => {
     }))
   }
 
-   const statusCode = REDIRECT_STATUS_CODE ? parseInt(REDIRECT_STATUS_CODE) : 301
-   const path = event.path
-    const url = `${REDIRECT_TARGET}${path}`
+  const statusCode = REDIRECT_STATUS_CODE ? parseInt(REDIRECT_STATUS_CODE) : 301
+  const path = event.path
+  const url = `${REDIRECT_TARGET}${path}`
 
   return sendRedirect(event, url, statusCode)
 })
