@@ -12,9 +12,20 @@ export default eventHandler((event) => {
     }))
   }
 
-  const statusCode = REDIRECT_STATUS_CODE ? parseInt(REDIRECT_STATUS_CODE) : 301
-  const path = event.path
-  const url = `${REDIRECT_TARGET}${path}`
+  try {
+    const statusCode = REDIRECT_STATUS_CODE ? parseInt(REDIRECT_STATUS_CODE) : 301
+    const path = event.path
+    let proto = ''
 
-  return sendRedirect(event, url, statusCode)
+    if (!REDIRECT_TARGET.startsWith('http')) {
+      proto = `${getRequestProtocol(event)}://`
+    }
+
+    const url = `${proto}${REDIRECT_TARGET}${path}`
+
+    return sendRedirect(event, url, statusCode)
+  } catch (err) {
+    setResponseHeader(event, 'Content-Type', 'application/json')
+    return sendError(event, err)
+  }
 })
