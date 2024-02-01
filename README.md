@@ -49,7 +49,6 @@ npm run preview
 
 Check out the [deployment documentation](https://nitro.unjs.io/deploy) for more information.
 
-
 ## Build and run Docker Image
 
 ```bash

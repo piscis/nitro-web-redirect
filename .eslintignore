@@ -1,7 +1,0 @@
-dist
-.output
-.nitro
-.env
-node-modules
-package.json
-pnpm-lock.yaml
