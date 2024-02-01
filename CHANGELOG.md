@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/piscis/nitro-web-redirect/compare/v1.0.1...v1.0.2) (2024-02-01)
+
+
+### Features
+
+* add tags hock to docker build ([2bc5610](https://github.com/piscis/nitro-web-redirect/commit/2bc5610d4cd7b5f4807ce2b5cf1f1e82ce43e3f2))
+
 ## [1.0.1](https://github.com/piscis/nitro-web-redirect/compare/1.0.0...v1.0.1) (2024-02-01)
 
 ## [1.0.0](https://github.com/piscis/nitro-web-redirect/compare/1db5c11b298707ffabfd175d4a38374d96333675...1.0.0) (2024-02-01)
