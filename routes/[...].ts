@@ -6,10 +6,11 @@ const {
 export default eventHandler((event) => {
 
   if(!REDIRECT_TARGET) {
-    return createError({
+    setResponseHeader(event, 'Content-Type', 'application/json')
+    return sendError(event, createError({
       statusCode: 400,
       statusMessage: 'REDIRECT_TARGET is not defined'
-    })
+    }))
   }
 
    const statusCode = REDIRECT_STATUS_CODE ? parseInt(REDIRECT_STATUS_CODE) : 301
