@@ -1,4 +1,4 @@
-name: Build & Test
+name: Lint & Test & Build
 
 concurrency:
   group: 'workflow = ${{ github.workflow }}, ref = ${{ github.event.ref }}, pr = ${{ github.event.pull_request.id }}'
@@ -16,20 +16,8 @@ jobs:
     name: Lint ✅
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: false
-
-      - name: Install NodeJS
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-
+      - uses: actions/checkout@v4
+      - uses: ./.github/workflows/configure-node.yml
       - name: Lint App
         shell: bash
         run: |
@@ -41,24 +29,24 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: false
-
-      - name: Install NodeJS
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-
+      - uses: actions/checkout@v4
+      - uses: ./.github/workflows/configure-node.yml
       - name: Test App
         shell: bash
         run: |
           pnpm i
           pnpm run test
 
+  build:
+    name: Build 👷🏼‍♂️
+    timeout-minutes: 3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/workflows/configure-node.yml
+      - name: Build App
+        shell: bash
+        run: |
+          pnpm i
+          pnpm run build
 
