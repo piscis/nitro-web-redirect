@@ -4,7 +4,6 @@ export default await antfu(
   {
     ignores: [
       'node_modules',
-      'dist',
       '.output',
       '.nitro',
       '.env',
@@ -13,13 +12,9 @@ export default await antfu(
     ],
   },
   {
-    stylistic: false,
-    ignores: ['tsconfig.json']
-  },
-  {
     rules: {
       'node/prefer-global/buffer': 'off',
-      'node/prefer-global/process': 'off'
-    }
-  }
+      'node/prefer-global/process': 'off',
+    },
+  },
 )
