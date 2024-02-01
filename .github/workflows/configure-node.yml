@@ -1,0 +1,23 @@
+name: Configure Node
+
+on:
+  workflow_call:
+
+jobs:
+  configure-node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - name: Lint App
+        shell: bash
+        run: |
+          pnpm i
+          pnpm run lint
