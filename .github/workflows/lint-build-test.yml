@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/configure-node.yml
+      - uses: .github/workflows/configure-node.yml
       - name: Lint App
         shell: bash
         run: |
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/configure-node.yml
+      - uses: .github/workflows/configure-node.yml
       - name: Test App
         shell: bash
         run: |
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/configure-node.yml
+      - uses: .github/workflows/configure-node.yml
       - name: Build App
         shell: bash
         run: |
