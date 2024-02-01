@@ -1,10 +1,11 @@
-const {
-  REDIRECT_TARGET,
-  REDIRECT_STATUS_CODE
-} = process.env
-
 export default eventHandler((event) => {
-  if (!REDIRECT_TARGET) {
+
+  const {
+    REDIRECT_TARGET,
+    REDIRECT_STATUS_CODE
+  } = process.env
+
+  if (!REDIRECT_TARGET || REDIRECT_TARGET === '' || REDIRECT_TARGET === 'undefined' || REDIRECT_TARGET === 'null') {
     setResponseHeader(event, 'Content-Type', 'application/json')
     return sendError(event, createError({
       statusCode: 400,
