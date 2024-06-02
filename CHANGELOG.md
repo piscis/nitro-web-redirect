@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/piscis/nitro-web-redirect/compare/v1.2.1...v1.3.0) (2024-06-02)
+
+
+### Features
+
+* add curl and wget to image ([c06b836](https://github.com/piscis/nitro-web-redirect/commit/c06b8368cb8f40eb2f79804a77562e1a5fa0ab0c))
+* use middleware instead of router to redirect routes ([b46ac4e](https://github.com/piscis/nitro-web-redirect/commit/b46ac4e7eb2222026472ed22acfdd209c5534779))
+
 ## [1.2.1](https://github.com/piscis/nitro-web-redirect/compare/v1.2.0...v1.2.1) (2024-02-01)
 
 ## [1.2.0](https://github.com/piscis/nitro-web-redirect/compare/v1.1.2...v1.2.0) (2024-02-01)
