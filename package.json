@@ -5,7 +5,7 @@
   "type": "module",
   "packageManager": "pnpm@8.15.9",
   "engines": {
-    "node": "20.17.0",
+    "node": "20.18.0",
     "pnpm": "8.15.9"
   },
   "scripts": {
@@ -31,11 +31,11 @@
     "@release-it/conventional-changelog": "^8.0.2",
     "destr": "^2.0.3",
     "dotenv": "^16.4.5",
-    "eslint": "^9.11.1",
-    "listhen": "^1.8.0",
-    "ofetch": "^1.4.0",
+    "eslint": "^9.12.0",
+    "listhen": "^1.9.0",
+    "ofetch": "^1.4.1",
     "pathe": "^1.1.2",
-    "release-it": "^17.6.0",
+    "release-it": "^17.9.0",
     "ufo": "^1.5.4",
     "vitest": "^1.6.0"
   }
