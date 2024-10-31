@@ -26,7 +26,7 @@ devDependencies:
     specifier: ^16.4.5
     version: 16.4.5
   eslint:
-    specifier: ^9.12.0
+    specifier: ^9.13.0
     version: 9.13.0
   listhen:
     specifier: ^1.9.0
