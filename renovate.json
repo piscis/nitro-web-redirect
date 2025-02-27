@@ -2,13 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Berlin",
   "schedule": [
-    "every 15 days"
+    "every 30 days"
   ],
-  "automergeSchedule": "every 15 days",
+  "automergeSchedule": "every 30 days",
   "extends": [
     "github>nuxt/renovate-config-nuxt",
     ":labels(dependencies,devops)",
-    ":maintainLockFilesWeekly",
+    ":maintainLockFilesMonthly",
     ":enableVulnerabilityAlerts",
     ":automergeLinters",
     ":automergeTypes",
