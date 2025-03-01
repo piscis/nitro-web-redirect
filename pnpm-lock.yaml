@@ -23,10 +23,10 @@ devDependencies:
     specifier: ^2.0.3
     version: 2.0.3
   dotenv:
-    specifier: ^16.4.5
+    specifier: ^16.4.7
     version: 16.4.7
   eslint:
-    specifier: ^9.13.0
+    specifier: ^9.21.0
     version: 9.21.0
   listhen:
     specifier: ^1.9.0
@@ -38,13 +38,13 @@ devDependencies:
     specifier: ^1.1.2
     version: 1.1.2
   release-it:
-    specifier: ^17.10.0
+    specifier: ^17.11.0
     version: 17.11.0(typescript@5.7.3)
   ufo:
     specifier: ^1.5.4
     version: 1.5.4
   vitest:
-    specifier: ^1.6.0
+    specifier: ^1.6.1
     version: 1.6.1
 
 packages:
@@ -6382,7 +6382,7 @@ packages:
       ky: 1.7.5
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
-      semver: 7.6.3
+      semver: 7.7.1
     dev: true
 
   /package-manager-detector@0.2.9:
@@ -8036,7 +8036,7 @@ packages:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.6.3
+      semver: 7.7.1
       xdg-basedir: 5.1.0
     dev: true
 
