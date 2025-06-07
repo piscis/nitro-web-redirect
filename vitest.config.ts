@@ -1,12 +1,7 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'nitro-test-utils/config'
 
 export default defineConfig({
-  test: {
-    poolOptions: {
-      threads: {
-        isolate: false,
-        singleThread: false,
-      },
-    },
+  nitro: {
+    global: false,
   },
 })
