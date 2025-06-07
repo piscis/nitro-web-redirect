@@ -23,6 +23,7 @@
     "release:major": "release-it -i major --only-version"
   },
   "dependencies": {
+    "consola": "^3.4.2",
     "nitropack": "latest"
   },
   "devDependencies": {
