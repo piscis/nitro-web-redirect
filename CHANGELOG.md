@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.7.0](https://github.com/piscis/nitro-web-redirect/compare/v1.6.0...v1.7.0) (2025-06-07)
+
 ## [1.6.0](https://github.com/piscis/nitro-web-redirect/compare/v1.5.0...v1.6.0) (2025-06-07)
 
 ### Features
