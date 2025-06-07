@@ -1,3 +1,5 @@
+import { consola as logger } from 'consola'
+
 export default eventHandler((event) => {
   const {
     REDIRECT_TARGET,
@@ -21,7 +23,9 @@ export default eventHandler((event) => {
       proto = `${getRequestProtocol(event)}://`
 
     const url = `${proto}${REDIRECT_TARGET}${path}`
-
+    const requestUrl = getRequestURL(event)
+    logger.info(`Redirecting to ${url} (${statusCode}) | "${REDIRECT_TARGET}" | "${REDIRECT_STATUS_CODE}" | ${proto} | ${path}`)
+    logger.info(`Request URL: ${requestUrl}`)
     return sendRedirect(event, url, statusCode)
   }
   catch (err) {
