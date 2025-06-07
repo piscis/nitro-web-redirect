@@ -8,6 +8,7 @@
     "node": "22.15.0"
   },
   "scripts": {
+    "clean": "rimraf .output .nitro node_modules",
     "start": "node .output/server/index.mjs",
     "prepare": "nitropack prepare",
     "dev": "nitropack dev",
@@ -36,6 +37,7 @@
     "ofetch": "^1.4.1",
     "pathe": "^2.0.3",
     "release-it": "^19.0.3",
+    "rimraf": "^6.0.1",
     "ufo": "^1.6.1",
     "vitest": "^3.2.2"
   }
