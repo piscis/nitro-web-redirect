@@ -12,12 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-node
-      - name: Lint & Build App
+      - name: Test & Lint & Build App
         shell: bash
         run: |
           pnpm i
-          pnpm run lint
-          pnpm run build
+          pnpm test
+          pnpm lint
+          pnpm build
 
       - name: Log in to Docker Hub
         if: github.event_name != 'pull_request'
