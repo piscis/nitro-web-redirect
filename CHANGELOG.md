@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/piscis/nitro-web-redirect/compare/v1.3.0...v1.4.0) (2025-06-07)
+
+### Features
+
+* adjust renovate config ([0fe0676](https://github.com/piscis/nitro-web-redirect/commit/0fe0676f8c9d0af35214e1f464f377305f2acba4))
+* migrate test suite to nitro-test-utils ([c7e06c3](https://github.com/piscis/nitro-web-redirect/commit/c7e06c337ade7c2c7cbe7a6f20d8db1ea8139cdd))
+* update dokumentation ([cabbe76](https://github.com/piscis/nitro-web-redirect/commit/cabbe760fa35a9fc52851fafa5af803bc20d3132))
+* upgrade setup action for node / pnpm ([0230b2f](https://github.com/piscis/nitro-web-redirect/commit/0230b2f68f2d650a90e75619e18ac67817ba57fb))
+
+### Bug Fixes
+
+* **deps:** Upgrade package dependencies to their latest versions ([50146d2](https://github.com/piscis/nitro-web-redirect/commit/50146d2d222a03b717fd68d41ad3c0811d1b6cdb))
+* fix format ([1d0c51a](https://github.com/piscis/nitro-web-redirect/commit/1d0c51a1510d05fcb5ed4536cd4e01170ef26348))
+
 ## [1.3.0](https://github.com/piscis/nitro-web-redirect/compare/v1.2.1...v1.3.0) (2024-06-02)
 
 
