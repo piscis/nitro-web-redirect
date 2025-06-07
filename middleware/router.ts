@@ -8,6 +8,7 @@ export default eventHandler((event) => {
 
   if (!REDIRECT_TARGET || REDIRECT_TARGET === '' || REDIRECT_TARGET === 'undefined' || REDIRECT_TARGET === 'null') {
     setResponseHeader(event, 'Content-Type', 'application/json')
+    logger.error('REDIRECT_TARGET is not defined')
     return sendError(event, createError({
       statusCode: 400,
       statusMessage: 'REDIRECT_TARGET is not defined',
@@ -15,7 +16,7 @@ export default eventHandler((event) => {
   }
 
   try {
-    const statusCode = REDIRECT_STATUS_CODE ? Number.parseInt(REDIRECT_STATUS_CODE) : 301
+    const statusCode = REDIRECT_STATUS_CODE ? Number.parseInt(`${REDIRECT_STATUS_CODE}`) : 301
     const path = event.path
     let proto = ''
 
@@ -29,6 +30,7 @@ export default eventHandler((event) => {
     return sendRedirect(event, url, statusCode)
   }
   catch (err) {
+    logger.error(err)
     setResponseHeader(event, 'Content-Type', 'application/json')
     return sendError(event, err)
   }
