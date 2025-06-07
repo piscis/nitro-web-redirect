@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0](https://github.com/piscis/nitro-web-redirect/compare/v1.4.0...v1.5.0) (2025-06-07)
+
+### Features
+
+* extend release build to run tests one more time ([ed6662d](https://github.com/piscis/nitro-web-redirect/commit/ed6662deda61397f4b1ae0dbfcf8b841359be147))
+
 ## [1.4.0](https://github.com/piscis/nitro-web-redirect/compare/v1.3.0...v1.4.0) (2025-06-07)
 
 ### Features
