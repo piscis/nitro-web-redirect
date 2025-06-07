@@ -21,10 +21,10 @@ export default eventHandler((event) => {
     let proto = ''
 
     if (!REDIRECT_TARGET.startsWith('http'))
-      proto = `${getRequestProtocol(event)}://`
+      proto = `${getRequestProtocol(event, { xForwardedProto: true })}://`
 
     const url = `${proto}${REDIRECT_TARGET}${path}`
-    const requestUrl = getRequestURL(event)
+    const requestUrl = getRequestURL(event, { xForwardedHost: true, xForwardedProto: true })
     logger.info(`Redirecting to ${url} (${statusCode}) | "${REDIRECT_TARGET}" | "${REDIRECT_STATUS_CODE}" | ${proto} | ${path}`)
     logger.info(`Request URL: ${requestUrl}`)
     return sendRedirect(event, url, statusCode)
