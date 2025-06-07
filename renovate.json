@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Berlin",
   "schedule": [
-    "every 30 days"
+    "every 30 day"
   ],
   "automergeSchedule": "every 30 days",
   "extends": [
