@@ -1,6 +1,6 @@
 # The MIT License
 
-Copyright © 2024 Alexander Pirsig
+Copyright © 2025 Alexander Pirsig <me@piscis.dev>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
