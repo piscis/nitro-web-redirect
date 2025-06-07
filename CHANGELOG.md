@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/piscis/nitro-web-redirect/compare/v1.5.0...v1.6.0) (2025-06-07)
+
+### Features
+
+* add clean script ([d2084a2](https://github.com/piscis/nitro-web-redirect/commit/d2084a2e72126d1ab6f66c98c3b0190b74c8d9fc))
+* log request info ([5ef0683](https://github.com/piscis/nitro-web-redirect/commit/5ef0683e33db62c3186e5782fd64efafb6466deb))
+
 ## [1.5.0](https://github.com/piscis/nitro-web-redirect/compare/v1.4.0...v1.5.0) (2025-06-07)
 
 ### Features
