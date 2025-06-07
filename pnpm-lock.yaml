@@ -33,6 +33,9 @@ importers:
       listhen:
         specifier: ^1.9.0
         version: 1.9.0
+      nitro-test-utils:
+        specifier: ^0.9.2
+        version: 0.9.2(nitropack@2.11.12)(vitest@3.2.2(@types/debug@4.1.12)(@types/node@22.15.30)(jiti@2.4.2)(terser@5.41.0)(yaml@2.8.0))
       ofetch:
         specifier: ^1.4.1
         version: 1.4.1
@@ -3530,6 +3533,12 @@ packages:
   new-github-release-url@2.0.0:
     resolution: {integrity: sha512-NHDDGYudnvRutt/VhKFlX26IotXe1w0cmkDm6JGquh5bz/bDTw0LufSmH/GxTjEdpHEO+bVKFTwdrcGa/9XlKQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  nitro-test-utils@0.9.2:
+    resolution: {integrity: sha512-X4cAWaDb/AtoCeOMgVzBYMxGteHCACxelzoklVoQ5HxYArtZCxtvp0ATBvv8bR8nCOaR5NfstrUEEXNhSR7doQ==}
+    peerDependencies:
+      nitropack: ^2
+      vitest: ^2 || ^3
 
   nitropack@2.11.12:
     resolution: {integrity: sha512-e2AdQrEY1IVoNTdyjfEQV93xkqz4SQxAMR0xWF8mZUUHxMLm6S4nPzpscjksmT4OdUxl0N8/DCaGjKQ9ghdodA==}
@@ -8764,6 +8773,16 @@ snapshots:
   new-github-release-url@2.0.0:
     dependencies:
       type-fest: 2.19.0
+
+  nitro-test-utils@0.9.2(nitropack@2.11.12)(vitest@3.2.2(@types/debug@4.1.12)(@types/node@22.15.30)(jiti@2.4.2)(terser@5.41.0)(yaml@2.8.0)):
+    dependencies:
+      dotenv: 16.5.0
+      listhen: 1.9.0
+      nitropack: 2.11.12
+      ofetch: 1.4.1
+      pathe: 2.0.3
+      ufo: 1.6.1
+      vitest: 3.2.2(@types/debug@4.1.12)(@types/node@22.15.30)(jiti@2.4.2)(terser@5.41.0)(yaml@2.8.0)
 
   nitropack@2.11.12:
     dependencies:
