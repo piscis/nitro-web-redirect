@@ -1,9 +1,8 @@
+import type { Listener } from 'listhen'
+import type { Nitro } from 'nitropack'
 import { fileURLToPath } from 'node:url'
-import { resolve } from 'pathe'
-import { joinURL } from 'ufo'
 import destr from 'destr'
 import { listen } from 'listhen'
-import { fetch } from 'ofetch'
 import {
   build,
   copyPublicAssets,
@@ -12,8 +11,9 @@ import {
   prepare,
   prerender,
 } from 'nitropack'
-import type { Listener } from 'listhen'
-import type { Nitro } from 'nitropack'
+import { fetch } from 'ofetch'
+import { resolve } from 'pathe'
+import { joinURL } from 'ufo'
 
 export interface Context {
   preset: string
