@@ -27,7 +27,7 @@
     "nitropack": "latest"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
+    "@antfu/eslint-config": "^5.4.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@release-it/conventional-changelog": "^10.0.1",
     "destr": "^2.0.5",
