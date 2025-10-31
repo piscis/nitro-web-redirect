@@ -34,7 +34,7 @@
     "dotenv": "^16.6.1",
     "eslint": "^9.38.0",
     "listhen": "^1.9.0",
-    "nitro-test-utils": "^0.10.0",
+    "nitro-test-utils": "^0.10.1",
     "ofetch": "^1.5.0",
     "pathe": "^2.0.3",
     "release-it": "^19.0.5",

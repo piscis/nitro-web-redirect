@@ -37,8 +37,8 @@ importers:
         specifier: ^1.9.0
         version: 1.9.0
       nitro-test-utils:
-        specifier: ^0.10.0
-        version: 0.10.0(nitropack@2.12.9)(vitest@3.2.4(@types/debug@4.1.12)(jiti@2.6.1)(terser@5.44.0)(yaml@2.8.1))
+        specifier: ^0.10.1
+        version: 0.10.1(nitropack@2.12.9)(vitest@3.2.4(@types/debug@4.1.12)(jiti@2.6.1)(terser@5.44.0)(yaml@2.8.1))
       ofetch:
         specifier: ^1.5.0
         version: 1.5.0
@@ -131,19 +131,10 @@ packages:
     resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.28.4':
-    resolution: {integrity: sha512-yZbBqeM6TkpP9du/I2pUZnJsRMGGvOuIrhjzC1AwHwW+6he4mni6Bp/m8ijn0iOuZuPI2BfkCoSRunpyjnrQKg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
   '@babel/parser@7.28.5':
     resolution: {integrity: sha512-KKBU1VGYR7ORr3At5HAtUQ+TV3SzRCXmA/8OdDZiLDBIZxVyzXuztPjfLd3BV1PRAQGCMWWSHYhL0F8d5uHBDQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-
-  '@babel/types@7.28.4':
-    resolution: {integrity: sha512-bkFqkLhh3pMBUQQkpVgWDWq/lqzc2678eUyDlTBhRqhCHFguYYGM0Efga7tYk4TogG/3x0EEl66/OQ+WGbWB/Q==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/types@7.28.5':
     resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
@@ -3627,8 +3618,8 @@ packages:
     resolution: {integrity: sha512-NHDDGYudnvRutt/VhKFlX26IotXe1w0cmkDm6JGquh5bz/bDTw0LufSmH/GxTjEdpHEO+bVKFTwdrcGa/9XlKQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  nitro-test-utils@0.10.0:
-    resolution: {integrity: sha512-IHfqeXh2d9GHihk/26mbrVJhQQkxCJCplbehXgUjXBUm6lQ4bxQcsNHeYgeKQxT0MgW+VmEtMrDYVAjt+JzMCQ==}
+  nitro-test-utils@0.10.1:
+    resolution: {integrity: sha512-2joRwYNIzfLLVSSmTd18ZMISYnaumc+NuE1/BfqNpf5yy8E8tZWaPRLWjCADCioK2N7rXGetnPxsEHZJKP22xw==}
     peerDependencies:
       nitropack: ^2
       vitest: ^2 || ^3 || ^4
@@ -4958,18 +4949,9 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.28.5': {}
 
-  '@babel/parser@7.28.4':
-    dependencies:
-      '@babel/types': 7.28.4
-
   '@babel/parser@7.28.5':
     dependencies:
       '@babel/types': 7.28.5
-
-  '@babel/types@7.28.4':
-    dependencies:
-      '@babel/helper-string-parser': 7.27.1
-      '@babel/helper-validator-identifier': 7.27.1
 
   '@babel/types@7.28.5':
     dependencies:
@@ -6221,7 +6203,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.22':
     dependencies:
-      '@babel/parser': 7.28.4
+      '@babel/parser': 7.28.5
       '@vue/shared': 3.5.22
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -6234,13 +6216,13 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.22':
     dependencies:
-      '@babel/parser': 7.28.4
+      '@babel/parser': 7.28.5
       '@vue/compiler-core': 3.5.22
       '@vue/compiler-dom': 3.5.22
       '@vue/compiler-ssr': 3.5.22
       '@vue/shared': 3.5.22
       estree-walker: 2.0.2
-      magic-string: 0.30.19
+      magic-string: 0.30.21
       postcss: 8.5.6
       source-map-js: 1.2.1
 
@@ -8611,7 +8593,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  nitro-test-utils@0.10.0(nitropack@2.12.9)(vitest@3.2.4(@types/debug@4.1.12)(jiti@2.6.1)(terser@5.44.0)(yaml@2.8.1)):
+  nitro-test-utils@0.10.1(nitropack@2.12.9)(vitest@3.2.4(@types/debug@4.1.12)(jiti@2.6.1)(terser@5.44.0)(yaml@2.8.1)):
     dependencies:
       dotenv: 17.2.3
       listhen: 1.9.0
