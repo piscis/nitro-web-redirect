@@ -31,7 +31,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@release-it/conventional-changelog": "^10.0.1",
     "destr": "^2.0.5",
-    "dotenv": "^16.6.1",
+    "dotenv": "^17.2.3",
     "eslint": "^9.39.0",
     "listhen": "^1.9.0",
     "nitro-test-utils": "^0.10.1",
