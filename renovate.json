@@ -2,9 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Berlin",
   "schedule": [
-    "every 30 day"
+    "every 90 day"
   ],
-  "automergeSchedule": "every 30 days",
+  "automergeSchedule": "every 90 days",
   "extends": [
     "github>nuxt/renovate-config-nuxt",
     ":labels(dependencies,devops)",
@@ -14,7 +14,7 @@
     ":automergeTypes",
     ":automergeMinor"
   ],
-  "baseBranches": [
+  "baseBranchPatterns": [
     "main"
   ]
 }
