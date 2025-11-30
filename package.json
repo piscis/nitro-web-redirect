@@ -27,19 +27,19 @@
     "nitropack": "latest"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
+    "@antfu/eslint-config": "^6.2.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@release-it/conventional-changelog": "^10.0.1",
+    "@release-it/conventional-changelog": "^10.0.2",
     "destr": "^2.0.5",
-    "dotenv": "^16.6.1",
-    "eslint": "^9.39.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.1",
     "listhen": "^1.9.0",
     "nitro-test-utils": "^0.10.1",
     "ofetch": "^1.5.1",
     "pathe": "^2.0.3",
-    "release-it": "^19.0.5",
-    "rimraf": "^6.1.0",
+    "release-it": "^19.0.6",
+    "rimraf": "^6.1.2",
     "ufo": "^1.6.1",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.14"
   }
 }
