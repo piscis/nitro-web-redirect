@@ -1,4 +1,6 @@
-// https://nitro.unjs.io/config
-export default defineNitroConfig({
-  compatibilityDate: '2025-11-30',
+import { defineConfig } from 'nitro'
+
+export default defineConfig({
+  compatibilityDate: '2026-03-22',
+  serverDir: './server',
 })
