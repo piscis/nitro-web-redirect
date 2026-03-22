@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.8.0](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/compare/v1.7.0...v1.8.0) (2026-03-22)
+
+### Features
+
+* convert eslint config to typescript ([e61f1ec](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/e61f1ece90488bee3ae11903feb80e48d8ea7d0c))
+* raise min compatiblity ([ee52db3](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/ee52db3e5e50923b1af42358f9167d8ec86ae736))
+
+### Bug Fixes
+
+* removes unnessesary install step ([2fdfe76](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/2fdfe7694f64c50b7393372f11b4d4b1376c12fe))
+
 ## [1.7.0](https://github.com/piscis/nitro-web-redirect/compare/v1.6.0...v1.7.0) (2025-06-07)
 
 ## [1.6.0](https://github.com/piscis/nitro-web-redirect/compare/v1.5.0...v1.6.0) (2025-06-07)
