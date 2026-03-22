@@ -14,6 +14,7 @@ on:
 jobs:
   del_runs:
     runs-on: ubuntu-latest
+    if: github.server_url == 'https://github.com'
     steps:
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
