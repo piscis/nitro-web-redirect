@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.0](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/compare/v1.8.0...v1.9.0) (2026-03-22)
+
+### Bug Fixes
+
+* skip GitHub-specific workflows on non-GitHub servers ([#12](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/issues/12)) ([5335d2b](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/5335d2bf2dced8cd79d4807584b986ec758468f4))
+
 ## [1.8.0](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/compare/v1.7.0...v1.8.0) (2026-03-22)
 
 ### Features
