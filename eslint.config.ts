@@ -9,6 +9,9 @@ export default await antfu(
       '.env',
       'pnpm-lock.yaml',
       'package.json',
+      '.agents',
+      '.claude/skills',
+      'skills-lock.json',
     ],
   },
   {

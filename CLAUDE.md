@@ -4,6 +4,10 @@
 
 **Public mirror:** the repo is push-mirrored on every commit to the public GitHub repo https://github.com/piscis/nitro-web-redirect. Everything committed is published there, so keep hostnames of private infrastructure, tokens and client names out of commits, docs and PRs. Issues and pull requests live on Forgejo only.
 
+## Skills
+
+Skills live in `.agents/skills/`; `.claude/skills/` holds committed symlinks to them, so edit and stage under `.agents/`. They are vendored from `mattpocock/skills`, tracked by `skills-lock.json`, and changed only through `npx skills add/remove/update`.
+
 ## Agent skills
 
 ### Issue tracker
