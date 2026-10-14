@@ -186,8 +186,8 @@ importers:
         specifier: latest
         version: 3.0.260903-beta
       nitro-test-utils:
-        specifier: ^1.4.0
-        version: 1.4.0(nitro@3.0.260903-beta)(vitest@4.1.11(vite@8.0.1(jiti@2.6.1)(yaml@2.9.1)))
+        specifier: ^3.0.2
+        version: 3.0.2(nitro@3.0.260903-beta)(vitest@4.1.11(vite@8.0.1(jiti@2.6.1)(yaml@2.9.1)))
       release-it:
         specifier: ^19.2.4
         version: 19.2.4
@@ -1278,8 +1278,8 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-  cookie-es@2.0.1:
-    resolution: {integrity: sha512-aVf4A4hI2w70LnF7GG+7xDQUkliwiXWXFvTjkip4+b64ygDQ2sJPRSKFDHbxn8o0xu9QzPkMuuiWIXyFSE2slA==}
+  cookie-es@3.1.1:
+    resolution: {integrity: sha512-UaXxwISYJPTr9hwQxMFYZ7kNhSXboMXP+Z3TRX6f1/NyaGPfuNUZOWP1pUEb75B2HjfklIYLVRfWiFZJyC6Npg==}
 
   core-js-compat@3.50.0:
     resolution: {integrity: sha512-XGpFGbMLHwSt74YLTKho7Ib242qi6O8MSX+sRokV4oz7iKXvQWGYZthjIhjRGMxjzVkAubBO512dKGYcefmX3Q==}
@@ -1715,9 +1715,6 @@ packages:
   get-east-asian-width@1.5.0:
     resolution: {integrity: sha512-CQ+bEO+Tva/qlmw24dCejulK5pMzVnUOFOijVogd3KQs07HnRIgp8TGipvCCRT06xeYEbpbgwaCxglFyiuIcmA==}
     engines: {node: '>=18'}
-
-  get-port-please@3.2.0:
-    resolution: {integrity: sha512-I9QVvBw5U/hw3RmWpYKRumUeaDgxTPd401x364rLmWBJcOQ753eov1eTgzDqRG9bqFIfDc7gfzcQEWrUri3o1A==}
 
   get-stream@8.0.1:
     resolution: {integrity: sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==}
@@ -2277,8 +2274,8 @@ packages:
   nf3@0.3.24:
     resolution: {integrity: sha512-HxLK4bo+5jNsEETZp4w3tJblHOA9MCBY14IN9nZJJV8JDxt9yNIYxuBuLMjTAR5GFa3HL61+8VQDUrXv3/C8fw==}
 
-  nitro-test-utils@1.4.0:
-    resolution: {integrity: sha512-d3pjlgADArO+XR56fGhkTEIz9gWq+GTAEHpUWROKmpJ0M6qE3wjapkAL/LzMoY9G5gJikB1L9m+tAEQCvAa5cQ==}
+  nitro-test-utils@3.0.2:
+    resolution: {integrity: sha512-f0YwDx+XMrc5l+Cw0TngGAmAzQAmeez+z8FJET0s/ecQ4uEAMfW7wpgFXS/W1hVEQDbtU2V+Dr0v/D9IHBbYlw==}
     peerDependencies:
       nitro: ^3
       vitest: ^4
@@ -3926,7 +3923,7 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cookie-es@2.0.1: {}
+  cookie-es@3.1.1: {}
 
   core-js-compat@3.50.0:
     dependencies:
@@ -4396,8 +4393,6 @@ snapshots:
   function-timeout@1.0.2: {}
 
   get-east-asian-width@1.5.0: {}
-
-  get-port-please@3.2.0: {}
 
   get-stream@8.0.1: {}
 
@@ -5085,11 +5080,10 @@ snapshots:
 
   nf3@0.3.24: {}
 
-  nitro-test-utils@1.4.0(nitro@3.0.260903-beta)(vitest@4.1.11(vite@8.0.1(jiti@2.6.1)(yaml@2.9.1))):
+  nitro-test-utils@3.0.2(nitro@3.0.260903-beta)(vitest@4.1.11(vite@8.0.1(jiti@2.6.1)(yaml@2.9.1))):
     dependencies:
-      cookie-es: 2.0.1
+      cookie-es: 3.1.1
       dotenv: 17.4.2
-      get-port-please: 3.2.0
       nitro: 3.0.260903-beta
       ofetch: 2.0.0-alpha.3
       vitest: 4.1.11(vite@8.0.1(jiti@2.6.1)(yaml@2.9.1))
