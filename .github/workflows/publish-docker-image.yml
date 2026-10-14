@@ -33,6 +33,14 @@ jobs:
         uses: docker/metadata-action@v6
         with:
           images: piscis/nitro-web-redirect
+          # The defaults (schedule, branch, tag, pr) plus the bare version:
+          # a vX.Y.Z tag pushes :X.Y.Z, :vX.Y.Z and :latest.
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            type=semver,pattern={{version}}
 
       - name: Build Docker image for the smoke test
         uses: docker/build-push-action@v7
