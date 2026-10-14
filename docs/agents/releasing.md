@@ -6,7 +6,7 @@ The moving parts:
 
 - `pnpm release` runs release-it, which takes the bump `@release-it/conventional-changelog` recommends (`fix` → patch, `feat` → minor, `!` or `BREAKING CHANGE` → major), writes the section into `CHANGELOG.md`, bumps `package.json` and commits both locally. It only runs on a `release/*` branch, and it never tags or pushes. `pnpm release:patch|minor|major` override the bump by hand.
 - Changelog links point at the public mirror `https://github.com/piscis/nitro-web-redirect`, because `CHANGELOG.md` is published there (`context` in `.release-it.json`).
-- A `v*` tag starts two workflows. On Forgejo, `forgejo-release.yml` creates the Forgejo release with that version's `CHANGELOG.md` section as notes (`scripts/release-notes.ts`). On the GitHub mirror, `publish-docker-image.yml` builds the image, runs `scripts/smoke-test.sh` against it, and only then pushes `piscis/nitro-web-redirect:vX.Y.Z` and `:latest`.
+- A `v*` tag starts two workflows. On Forgejo, `forgejo-release.yml` creates the Forgejo release with that version's `CHANGELOG.md` section as notes (`scripts/release-notes.ts`). On the GitHub mirror, `publish-docker-image.yml` builds the image, runs `scripts/smoke-test.sh` against it, and only then pushes `piscis/nitro-web-redirect:X.Y.Z`, `:vX.Y.Z` and `:latest`.
 - `scripts/smoke-test.sh <image>` starts the image with `REDIRECT_TARGET=https://example.com`, requests a path with a query string and expects `301` with the matching `Location`. Exit code 0 means the image is good.
 
 ## 1. Merge
@@ -51,6 +51,6 @@ Done when `git ls-remote --tags origin vX.Y.Z` names that commit.
 
 1. **Forgejo release**: `curl -s -H "$AUTH" "$API/releases/tags/vX.Y.Z" | jq '{name, body}'` shows the section; if not, read the `Forgejo release` run's log by the tag's commit SHA ([issue-tracker.md](./issue-tracker.md#pull-requests)).
 2. **Publish run**: `gh run list --repo piscis/nitro-web-redirect --workflow publish-docker-image.yml --limit 3` shows the `vX.Y.Z` run `completed success`; `gh run watch <id> --repo piscis/nitro-web-redirect` while it runs.
-3. **Image**: `docker pull piscis/nitro-web-redirect:vX.Y.Z`, then `scripts/smoke-test.sh piscis/nitro-web-redirect:vX.Y.Z`, and check that `:latest` has the same digest (`docker buildx imagetools inspect piscis/nitro-web-redirect:latest`).
+3. **Image**: `docker pull piscis/nitro-web-redirect:X.Y.Z`, then `scripts/smoke-test.sh piscis/nitro-web-redirect:X.Y.Z`, and check that `:vX.Y.Z` and `:latest` have the same digest (`docker buildx imagetools inspect piscis/nitro-web-redirect:<tag>` for each of the three).
 
 Done when all three pass. If one fails, report what failed to the maintainer and propose a `fix:` pull request shipped as the next patch release. Published versions stay as they are: every tag, Git or Docker, keeps pointing where it was first pushed.
