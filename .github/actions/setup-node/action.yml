@@ -3,7 +3,7 @@ description: Install NodeJS and its dependencies
 runs:
   using: composite
   steps:
-    - uses: pnpm/action-setup@v5
+    - uses: pnpm/action-setup@v6
       with:
         run_install: false
     - name: Install NodeJS
