@@ -1,8 +1,7 @@
 minimumReleaseAge: 1440
-
-shellEmulator: true
-
+minimumReleaseAgeExcludePrune: true
 trustPolicy: no-downgrade
+shellEmulator: true
 
 onlyBuiltDependencies:
   - '@parcel/watcher'
