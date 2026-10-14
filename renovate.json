@@ -6,6 +6,7 @@
     "every 30 day"
   ],
   "automergeSchedule": "every 30 days",
+  "minimumReleaseAge": "1 day",
   "extends": [
     "github>nuxt/renovate-config-nuxt",
     ":labels(dependencies,devops)",
