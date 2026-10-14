@@ -1,21 +1,21 @@
 # Changelog
 
-## [1.9.0](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/compare/v1.8.0...v1.9.0) (2026-03-22)
+## [1.9.0](https://github.com/piscis/nitro-web-redirect/compare/v1.8.0...v1.9.0) (2026-03-22)
 
 ### Bug Fixes
 
-* skip GitHub-specific workflows on non-GitHub servers ([#12](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/issues/12)) ([5335d2b](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/5335d2bf2dced8cd79d4807584b986ec758468f4))
+* skip GitHub-specific workflows on non-GitHub servers ([#12](https://github.com/piscis/nitro-web-redirect/issues/12)) ([912d448](https://github.com/piscis/nitro-web-redirect/commit/912d448703e43e4ec3b96d9b7b4347fcbeb944c7))
 
-## [1.8.0](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/compare/v1.7.0...v1.8.0) (2026-03-22)
+## [1.8.0](https://github.com/piscis/nitro-web-redirect/compare/v1.7.0...v1.8.0) (2026-03-22)
 
 ### Features
 
-* convert eslint config to typescript ([e61f1ec](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/e61f1ece90488bee3ae11903feb80e48d8ea7d0c))
-* raise min compatiblity ([ee52db3](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/ee52db3e5e50923b1af42358f9167d8ec86ae736))
+* convert eslint config to typescript ([e70e0c5](https://github.com/piscis/nitro-web-redirect/commit/e70e0c53ac60259f586c19a79a27aee882957b61))
+* raise min compatiblity ([46151cb](https://github.com/piscis/nitro-web-redirect/commit/46151cbb35253538fb384d3b0d30a8085c5ca29d))
 
 ### Bug Fixes
 
-* removes unnessesary install step ([2fdfe76](https://code.vicoli.de/vicoli-labs/nitro-web-redirect/commit/2fdfe7694f64c50b7393372f11b4d4b1376c12fe))
+* removes unnessesary install step ([100e239](https://github.com/piscis/nitro-web-redirect/commit/100e239fa7900dc456504539159c78fdac521e27))
 
 ## [1.7.0](https://github.com/piscis/nitro-web-redirect/compare/v1.6.0...v1.7.0) (2025-06-07)
 

@@ -10,6 +10,7 @@ A lightweight Nitro.js application that redirects all incoming requests to a spe
 - [Local Development](#local-development)
 - [Production Deployment](#production-deployment)
 - [Testing](#testing)
+- [Releasing](#releasing)
 
 ## Features
 
@@ -210,6 +211,10 @@ pnpm run test:run
 ```
 
 Unit tests in `test/unit/` cover the configuration and location rules without a server. The tests in `test/e2e/` build the server and send requests to it in-process with [nitro-test-utils](https://github.com/johannschopplich/nitro-test-utils); each file runs one configuration, because the server reads it once at startup.
+
+## Releasing
+
+Versions come from the conventional-commit titles on `main`: `pnpm release` writes `CHANGELOG.md` and bumps `package.json` on a release branch, a `v*` tag creates the release, and the GitHub mirror publishes the image to Docker Hub after a smoke test. The steps are in [docs/agents/releasing.md](docs/agents/releasing.md).
 
 ---
 
