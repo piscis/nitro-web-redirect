@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.0.0](https://github.com/piscis/nitro-web-redirect/compare/v1.9.0...v2.0.0) (2026-10-14)
+
+### ⚠ BREAKING CHANGES
+
+* an invalid configuration now stops the server at
+  startup instead of being handled per request. A missing or empty
+  REDIRECT_TARGET (or the strings "undefined" / "null"), which used to
+  answer every request with 400, now exits with code 1. REDIRECT_STATUS_CODE
+  must be one of 301, 302, 303, 307 or 308 (default 301); any other
+  value, such as 200, 404 or abc, now exits with code 1.
+
+### Features
+
+* **ai:** Add claude settings and mcp server ([ed16d1f](https://github.com/piscis/nitro-web-redirect/commit/ed16d1feb8642fe64234f8818ca5023704eae74c))
+* validate config at startup and make the redirect testable on Nitro v3 (#48) ([89bff79](https://github.com/piscis/nitro-web-redirect/commit/89bff79f0061097efac1c22708d85529c3f5d70b))
+
+### Bug Fixes
+
+* **deps:** sync lockfile with package.json (#33) ([b8f3a30](https://github.com/piscis/nitro-web-redirect/commit/b8f3a303682c790a912332c60541e60f5307c976))
+* a redirect target counts as having a protocol only on `^https?://`, so a host such as `httpbin.org` is no longer taken for one ([89bff79](https://github.com/piscis/nitro-web-redirect/commit/89bff79f0061097efac1c22708d85529c3f5d70b))
+* trailing slashes on the redirect target are trimmed ([89bff79](https://github.com/piscis/nitro-web-redirect/commit/89bff79f0061097efac1c22708d85529c3f5d70b))
+
 ## [1.9.0](https://github.com/piscis/nitro-web-redirect/compare/v1.8.0...v1.9.0) (2026-03-22)
 
 ### Bug Fixes
