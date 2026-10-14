@@ -16,7 +16,8 @@
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
       "preset": {
-        "name": "conventionalcommits"
+        "name": "conventionalcommits",
+        "issuePrefixes": ["\u0000"]
       },
       "header": "# Changelog",
       "context": {

@@ -4,7 +4,7 @@
 
 ### Bug Fixes
 
-* skip GitHub-specific workflows on non-GitHub servers ([#12](https://github.com/piscis/nitro-web-redirect/issues/12)) ([912d448](https://github.com/piscis/nitro-web-redirect/commit/912d448703e43e4ec3b96d9b7b4347fcbeb944c7))
+* skip GitHub-specific workflows on non-GitHub servers (#12) ([912d448](https://github.com/piscis/nitro-web-redirect/commit/912d448703e43e4ec3b96d9b7b4347fcbeb944c7))
 
 ## [1.8.0](https://github.com/piscis/nitro-web-redirect/compare/v1.7.0...v1.8.0) (2026-03-22)
 
@@ -61,7 +61,7 @@
 
 ### Features
 
-* Add unit-tests ([#1](https://github.com/piscis/nitro-web-redirect/issues/1)) ([ff28257](https://github.com/piscis/nitro-web-redirect/commit/ff28257f19d76b3f356603a8ac2c4695f9051d30))
+* Add unit-tests (#1) ([ff28257](https://github.com/piscis/nitro-web-redirect/commit/ff28257f19d76b3f356603a8ac2c4695f9051d30))
 * reformat readme.md ([be72eb8](https://github.com/piscis/nitro-web-redirect/commit/be72eb849585a27c5e09c12fcfd1018683aed426))
 
 ## [1.1.2](https://github.com/piscis/nitro-web-redirect/compare/v1.1.1...v1.1.2) (2024-02-01)
