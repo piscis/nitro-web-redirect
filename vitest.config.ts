@@ -1,7 +1,5 @@
 import { defineConfig } from 'nitro-test-utils/config'
 
-export default defineConfig({
-  nitro: {
-    global: false,
-  },
+export default defineConfig({}, {
+  global: false,
 })
