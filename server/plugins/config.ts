@@ -4,18 +4,15 @@ import { definePlugin } from 'nitro'
 import { setActiveConfig } from '../utils/active-config'
 import { loadConfig } from '../utils/config'
 
-export default definePlugin((nitroApp) => {
+export default definePlugin(() => {
   try {
     const config = loadConfig(process.env)
     setActiveConfig(config)
-    logger.info(`Redirecting to ${config.target} with ${config.statusCode}`)
+    const { protocol, host, basePath } = config.target
+    logger.info(`Redirecting to ${protocol}${host}${basePath} with ${config.statusCode}`)
   }
   catch (error) {
     logger.error(`Invalid configuration: ${error instanceof Error ? error.message : String(error)}`)
     process.exit(1)
   }
-
-  nitroApp.hooks?.hook('error', (error) => {
-    logger.error(error)
-  })
 })

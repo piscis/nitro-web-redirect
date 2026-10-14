@@ -8,6 +8,6 @@ export function setActiveConfig(config: Configuration): void {
 }
 
 /** The validated Configuration, or `undefined` if startup did not provide one. */
-export function useActiveConfig(): Configuration | undefined {
+export function getActiveConfig(): Configuration | undefined {
   return activeConfig
 }

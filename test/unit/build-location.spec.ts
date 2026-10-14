@@ -1,10 +1,9 @@
-import type { Configuration } from '../../server/utils/config'
 import { describe, expect, it } from 'vitest'
+import { loadConfig } from '../../server/utils/config'
 import { buildLocation } from '../../server/utils/location'
 
 function locationFor(target: string, requestUrl: string): string {
-  const config: Configuration = { target, statusCode: 301 }
-  return buildLocation(config, new URL(requestUrl))
+  return buildLocation(loadConfig({ REDIRECT_TARGET: target }).target, new URL(requestUrl))
 }
 
 describe('buildLocation', () => {

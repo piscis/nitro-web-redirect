@@ -1,15 +1,10 @@
-import type { Configuration } from './config'
-
-const PROTOCOL = /^https?:\/\//i
-const TRAILING_SLASHES = /\/+$/
+import type { RedirectTarget } from './config'
 
 /**
- * Builds the Location a request is redirected to: the Redirect Target, without
- * trailing slashes, followed by the requested path and query. A target without
- * a protocol takes the request's; a path in the target is a Base Path.
+ * Builds the Location a request is redirected to: the Redirect Target followed
+ * by the requested path and query. A target without a protocol takes the request's.
  */
-export function buildLocation(config: Configuration, requestUrl: URL): string {
-  const target = config.target.replace(TRAILING_SLASHES, '')
-  const origin = PROTOCOL.test(target) ? target : `${requestUrl.protocol}//${target}`
-  return `${origin}${requestUrl.pathname}${requestUrl.search}`
+export function buildLocation(target: RedirectTarget, requestUrl: URL): string {
+  const protocol = target.protocol || `${requestUrl.protocol}//`
+  return `${protocol}${target.host}${target.basePath}${requestUrl.pathname}${requestUrl.search}`
 }
