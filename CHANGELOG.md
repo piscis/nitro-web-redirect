@@ -13,31 +13,31 @@
 
 ### Features
 
-* **ai:** Add claude settings and mcp server ([ed16d1f](https://github.com/piscis/nitro-web-redirect/commit/ed16d1feb8642fe64234f8818ca5023704eae74c))
-* validate config at startup and make the redirect testable on Nitro v3 (#48) ([89bff79](https://github.com/piscis/nitro-web-redirect/commit/89bff79f0061097efac1c22708d85529c3f5d70b))
+* **ai:** Add claude settings and mcp server ([5bf92d7](https://github.com/piscis/nitro-web-redirect/commit/5bf92d76e470b03893cf2f5067385c080bbbe457))
+* validate config at startup and make the redirect testable on Nitro v3 (#48) ([7adb016](https://github.com/piscis/nitro-web-redirect/commit/7adb016c3f1df781cd5500cf48746441b7293ee5))
 
 ### Bug Fixes
 
-* **deps:** sync lockfile with package.json (#33) ([b8f3a30](https://github.com/piscis/nitro-web-redirect/commit/b8f3a303682c790a912332c60541e60f5307c976))
-* a redirect target counts as having a protocol only on `^https?://`, so a host such as `httpbin.org` is no longer taken for one ([89bff79](https://github.com/piscis/nitro-web-redirect/commit/89bff79f0061097efac1c22708d85529c3f5d70b))
-* trailing slashes on the redirect target are trimmed ([89bff79](https://github.com/piscis/nitro-web-redirect/commit/89bff79f0061097efac1c22708d85529c3f5d70b))
+* **deps:** sync lockfile with package.json (#33) ([b1a6cb9](https://github.com/piscis/nitro-web-redirect/commit/b1a6cb95b10f426abd8056752c3c8a2048e8abfb))
+* a redirect target counts as having a protocol only on `^https?://`, so a host such as `httpbin.org` is no longer taken for one ([7adb016](https://github.com/piscis/nitro-web-redirect/commit/7adb016c3f1df781cd5500cf48746441b7293ee5))
+* trailing slashes on the redirect target are trimmed ([7adb016](https://github.com/piscis/nitro-web-redirect/commit/7adb016c3f1df781cd5500cf48746441b7293ee5))
 
 ## [1.9.0](https://github.com/piscis/nitro-web-redirect/compare/v1.8.0...v1.9.0) (2026-03-22)
 
 ### Bug Fixes
 
-* skip GitHub-specific workflows on non-GitHub servers (#12) ([912d448](https://github.com/piscis/nitro-web-redirect/commit/912d448703e43e4ec3b96d9b7b4347fcbeb944c7))
+* skip GitHub-specific workflows on non-GitHub servers (#12) ([c6a50f1](https://github.com/piscis/nitro-web-redirect/commit/c6a50f1621f2d16b6544ec9a8522931996514f52))
 
 ## [1.8.0](https://github.com/piscis/nitro-web-redirect/compare/v1.7.0...v1.8.0) (2026-03-22)
 
 ### Features
 
-* convert eslint config to typescript ([e70e0c5](https://github.com/piscis/nitro-web-redirect/commit/e70e0c53ac60259f586c19a79a27aee882957b61))
-* raise min compatiblity ([46151cb](https://github.com/piscis/nitro-web-redirect/commit/46151cbb35253538fb384d3b0d30a8085c5ca29d))
+* convert eslint config to typescript ([f6446f0](https://github.com/piscis/nitro-web-redirect/commit/f6446f0e4edab74cc1d170f39f43594cdfd84d09))
+* raise min compatiblity ([ebe0c53](https://github.com/piscis/nitro-web-redirect/commit/ebe0c539c13a650a2c72638f75d11fba1f50c2ef))
 
 ### Bug Fixes
 
-* removes unnessesary install step ([100e239](https://github.com/piscis/nitro-web-redirect/commit/100e239fa7900dc456504539159c78fdac521e27))
+* removes unnessesary install step ([aa62bbb](https://github.com/piscis/nitro-web-redirect/commit/aa62bbbae9dfc69efd3fdaae2fd8bbf7104b674c))
 
 ## [1.7.0](https://github.com/piscis/nitro-web-redirect/compare/v1.6.0...v1.7.0) (2025-06-07)
 
@@ -45,36 +45,36 @@
 
 ### Features
 
-* add clean script ([d2084a2](https://github.com/piscis/nitro-web-redirect/commit/d2084a2e72126d1ab6f66c98c3b0190b74c8d9fc))
-* log request info ([5ef0683](https://github.com/piscis/nitro-web-redirect/commit/5ef0683e33db62c3186e5782fd64efafb6466deb))
+* add clean script ([f3d6562](https://github.com/piscis/nitro-web-redirect/commit/f3d65621777f7fb1ddb06e1c44a3acfef9fae46c))
+* log request info ([d1666fa](https://github.com/piscis/nitro-web-redirect/commit/d1666fa10685fd7df060c672f3f6990b4a1567a3))
 
 ## [1.5.0](https://github.com/piscis/nitro-web-redirect/compare/v1.4.0...v1.5.0) (2025-06-07)
 
 ### Features
 
-* extend release build to run tests one more time ([ed6662d](https://github.com/piscis/nitro-web-redirect/commit/ed6662deda61397f4b1ae0dbfcf8b841359be147))
+* extend release build to run tests one more time ([f3820ac](https://github.com/piscis/nitro-web-redirect/commit/f3820ac0a3839395c96634485260426ad68ebf44))
 
 ## [1.4.0](https://github.com/piscis/nitro-web-redirect/compare/v1.3.0...v1.4.0) (2025-06-07)
 
 ### Features
 
-* adjust renovate config ([0fe0676](https://github.com/piscis/nitro-web-redirect/commit/0fe0676f8c9d0af35214e1f464f377305f2acba4))
-* migrate test suite to nitro-test-utils ([c7e06c3](https://github.com/piscis/nitro-web-redirect/commit/c7e06c337ade7c2c7cbe7a6f20d8db1ea8139cdd))
-* update dokumentation ([cabbe76](https://github.com/piscis/nitro-web-redirect/commit/cabbe760fa35a9fc52851fafa5af803bc20d3132))
-* upgrade setup action for node / pnpm ([0230b2f](https://github.com/piscis/nitro-web-redirect/commit/0230b2f68f2d650a90e75619e18ac67817ba57fb))
+* adjust renovate config ([64d8801](https://github.com/piscis/nitro-web-redirect/commit/64d88013b1a9f59fb5d4ac2ec741931b957521ba))
+* migrate test suite to nitro-test-utils ([9e823f4](https://github.com/piscis/nitro-web-redirect/commit/9e823f494f6ba6e5833da1c12eac97f5886747dd))
+* update dokumentation ([fb7f219](https://github.com/piscis/nitro-web-redirect/commit/fb7f219156c7d7d554ad57f5f923d95d35a1a5be))
+* upgrade setup action for node / pnpm ([d539d0b](https://github.com/piscis/nitro-web-redirect/commit/d539d0b549096302fd17ddcaec5d51f9f539b214))
 
 ### Bug Fixes
 
-* **deps:** Upgrade package dependencies to their latest versions ([50146d2](https://github.com/piscis/nitro-web-redirect/commit/50146d2d222a03b717fd68d41ad3c0811d1b6cdb))
-* fix format ([1d0c51a](https://github.com/piscis/nitro-web-redirect/commit/1d0c51a1510d05fcb5ed4536cd4e01170ef26348))
+* **deps:** Upgrade package dependencies to their latest versions ([6606441](https://github.com/piscis/nitro-web-redirect/commit/66064417a94d939ae32b4e2da8661eeb0866b4be))
+* fix format ([43e87d8](https://github.com/piscis/nitro-web-redirect/commit/43e87d870e31a269b95bd79bcdda90a977ced94d))
 
 ## [1.3.0](https://github.com/piscis/nitro-web-redirect/compare/v1.2.1...v1.3.0) (2024-06-02)
 
 
 ### Features
 
-* add curl and wget to image ([c06b836](https://github.com/piscis/nitro-web-redirect/commit/c06b8368cb8f40eb2f79804a77562e1a5fa0ab0c))
-* use middleware instead of router to redirect routes ([b46ac4e](https://github.com/piscis/nitro-web-redirect/commit/b46ac4e7eb2222026472ed22acfdd209c5534779))
+* add curl and wget to image ([366a3c3](https://github.com/piscis/nitro-web-redirect/commit/366a3c33907c3920e7937a4306528e3baad463a7))
+* use middleware instead of router to redirect routes ([938fb80](https://github.com/piscis/nitro-web-redirect/commit/938fb803c816634b4717fd43f94cbec51c2da776))
 
 ## [1.2.1](https://github.com/piscis/nitro-web-redirect/compare/v1.2.0...v1.2.1) (2024-02-01)
 
@@ -83,29 +83,29 @@
 
 ### Features
 
-* Add unit-tests (#1) ([ff28257](https://github.com/piscis/nitro-web-redirect/commit/ff28257f19d76b3f356603a8ac2c4695f9051d30))
-* reformat readme.md ([be72eb8](https://github.com/piscis/nitro-web-redirect/commit/be72eb849585a27c5e09c12fcfd1018683aed426))
+* Add unit-tests (#1) ([a401f4f](https://github.com/piscis/nitro-web-redirect/commit/a401f4f904a98b527c0faafdd96fc2839d6899d0))
+* reformat readme.md ([aa2b74c](https://github.com/piscis/nitro-web-redirect/commit/aa2b74cb7b65ee3a706d37fd2d0d0eb946bd72a8))
 
 ## [1.1.2](https://github.com/piscis/nitro-web-redirect/compare/v1.1.1...v1.1.2) (2024-02-01)
 
 
 ### Bug Fixes
 
-* fixes a typo in README.md ([1de2cd7](https://github.com/piscis/nitro-web-redirect/commit/1de2cd7786de2698b933a3e9183fec2e0192f7ee))
+* fixes a typo in README.md ([cb85252](https://github.com/piscis/nitro-web-redirect/commit/cb85252a807ac1f1ba9580f4fb0db51fa3e11c7f))
 
 ## [1.1.1](https://github.com/piscis/nitro-web-redirect/compare/v1.1.0...v1.1.1) (2024-02-01)
 
 
 ### Features
 
-* extend documentation ([e9d485f](https://github.com/piscis/nitro-web-redirect/commit/e9d485f1046ab7feba12cc8915c73e65ca5ec6d5))
+* extend documentation ([9eb9346](https://github.com/piscis/nitro-web-redirect/commit/9eb9346e10ee5e8eb2721f7b11e65366beb2e572))
 
 ## [1.1.0](https://github.com/piscis/nitro-web-redirect/compare/v1.0.3...v1.1.0) (2024-02-01)
 
 
 ### Features
 
-* add fallback for missing protocol config ([0c629cb](https://github.com/piscis/nitro-web-redirect/commit/0c629cb73e8f81b64bfee33281620b7f1018a684))
+* add fallback for missing protocol config ([7058955](https://github.com/piscis/nitro-web-redirect/commit/7058955763980ac539948a89a094f37438a3ade5))
 
 ## [1.0.3](https://github.com/piscis/nitro-web-redirect/compare/v1.0.2...v1.0.3) (2024-02-01)
 
@@ -114,72 +114,72 @@
 
 ### Features
 
-* add tags hock to docker build ([2bc5610](https://github.com/piscis/nitro-web-redirect/commit/2bc5610d4cd7b5f4807ce2b5cf1f1e82ce43e3f2))
+* add tags hock to docker build ([8017846](https://github.com/piscis/nitro-web-redirect/commit/8017846969e18ac32ddff25f0895713d21ccd8f1))
 
 ## [1.0.1](https://github.com/piscis/nitro-web-redirect/compare/1.0.0...v1.0.1) (2024-02-01)
 
-## [1.0.0](https://github.com/piscis/nitro-web-redirect/compare/1db5c11b298707ffabfd175d4a38374d96333675...1.0.0) (2024-02-01)
+## [1.0.0](https://github.com/piscis/nitro-web-redirect/compare/d9656e8afab88c3bf6282a258251836f3215a854...1.0.0) (2024-02-01)
 
 
 ### Features
 
-* add docker build file ([4f3561e](https://github.com/piscis/nitro-web-redirect/commit/4f3561e9df50ee82a864173ea2d932d7e4c5d83a))
-* add docker publish image build step ([bbf144e](https://github.com/piscis/nitro-web-redirect/commit/bbf144e5b7df604d3ab749b7cafb2672bb5c9f21))
-* add docu for docker build image ([9e04f24](https://github.com/piscis/nitro-web-redirect/commit/9e04f2496e5292c7ad57dbc112653bd8975b84b0))
-* add dummy teststep ([ae3ea33](https://github.com/piscis/nitro-web-redirect/commit/ae3ea33387eb6477047077e3b7c698ff2e1fa9c2))
-* add github build actions ([bfbd216](https://github.com/piscis/nitro-web-redirect/commit/bfbd21692b7a8dd8c28188d0dc95789fa768a28e))
-* adds basic release config ([952f20a](https://github.com/piscis/nitro-web-redirect/commit/952f20a4cc7c553fd6294afcf5cc2f66e92b1f3a))
-* adds editorconfig ([48e4500](https://github.com/piscis/nitro-web-redirect/commit/48e4500996ee15cd163ed6f815a842a2c9f64212))
-* adds eslint configuration ([b40bb6b](https://github.com/piscis/nitro-web-redirect/commit/b40bb6b2178b550e6b0cc7964b7710d5006e88c0))
-* adds example for enviroment config ([e4a4398](https://github.com/piscis/nitro-web-redirect/commit/e4a43984dd8e39121697b50905d148521e6315b4))
-* adds gitignore config ([1db5c11](https://github.com/piscis/nitro-web-redirect/commit/1db5c11b298707ffabfd175d4a38374d96333675))
-* adds nitro configuration ([ad69537](https://github.com/piscis/nitro-web-redirect/commit/ad695370b5f6a5db36f74931e75c958db21a1a0d))
-* adds pnpm package configuration ([0bb2156](https://github.com/piscis/nitro-web-redirect/commit/0bb2156e813c99855afb4945101db13b897afdaf))
-* adds redirect routing ([4d47789](https://github.com/piscis/nitro-web-redirect/commit/4d477893cab0f1defc74562d462c0be4d21203b3))
-* adds release-it config ([04c3b35](https://github.com/piscis/nitro-web-redirect/commit/04c3b35c458694be43f748fc337fb37f3b857e01))
-* adds renovate config ([96778ee](https://github.com/piscis/nitro-web-redirect/commit/96778eed5decaf290a551fa2d097ec88d5d98333))
-* eslint ignore .env and .nitro directories ([7a1160d](https://github.com/piscis/nitro-web-redirect/commit/7a1160d9ac907462203eb84dbf8894b3fb3c9de1))
-* extend docker build and push step ([eeb4af5](https://github.com/piscis/nitro-web-redirect/commit/eeb4af55981e8b3a52f75d19ff70760789ad43e3))
-* extend docker ignore file with build and github actions ([427e806](https://github.com/piscis/nitro-web-redirect/commit/427e806f559c6301e3487fb78203b6faf967eb45))
-* license MIT ([ab4abdc](https://github.com/piscis/nitro-web-redirect/commit/ab4abdc0e510c2ce1cb0f9b6096a5c503884e1b4))
-* setup pnpm config ([aed7b89](https://github.com/piscis/nitro-web-redirect/commit/aed7b898be1d7ea0323ea7796e5b1f4f507268e3))
-* use actions for node setup ([9bf9abf](https://github.com/piscis/nitro-web-redirect/commit/9bf9abf74aa3cd63902d009852fcd991b71ab585))
+* add docker build file ([275cba0](https://github.com/piscis/nitro-web-redirect/commit/275cba0348130c0e59b1948bd31752590b63a843))
+* add docker publish image build step ([d7d7062](https://github.com/piscis/nitro-web-redirect/commit/d7d7062858579f070590d7d58ca5398c5a74b9e5))
+* add docu for docker build image ([62e8eae](https://github.com/piscis/nitro-web-redirect/commit/62e8eae54c0999c97e780ff90ed73405c8492bc1))
+* add dummy teststep ([0fc7e48](https://github.com/piscis/nitro-web-redirect/commit/0fc7e48af8851d4ef634d80968055df78ce886bf))
+* add github build actions ([9604430](https://github.com/piscis/nitro-web-redirect/commit/9604430bcab44578a1cd31ce3964574a313c17ed))
+* adds basic release config ([b81e747](https://github.com/piscis/nitro-web-redirect/commit/b81e74712cda3734c30185209712c3fa00d0dfd8))
+* adds editorconfig ([335506b](https://github.com/piscis/nitro-web-redirect/commit/335506bfe9b24ceb3c2f0ee1c75bd2e384d71fa3))
+* adds eslint configuration ([8d2a50d](https://github.com/piscis/nitro-web-redirect/commit/8d2a50d19b3c80e1e146d703148a70ce4f168d1e))
+* adds example for enviroment config ([ffad44b](https://github.com/piscis/nitro-web-redirect/commit/ffad44bb0fe46b7af1c21e77656a96947ade03f5))
+* adds gitignore config ([d9656e8](https://github.com/piscis/nitro-web-redirect/commit/d9656e8afab88c3bf6282a258251836f3215a854))
+* adds nitro configuration ([0249f95](https://github.com/piscis/nitro-web-redirect/commit/0249f951cb38727387eb3020f4bb8354963b9eca))
+* adds pnpm package configuration ([dd659ff](https://github.com/piscis/nitro-web-redirect/commit/dd659ff5d4594ab9fbded2b0af31a9d76dd5a03b))
+* adds redirect routing ([4943231](https://github.com/piscis/nitro-web-redirect/commit/4943231016758d11ac7f70e588e1ef7c296c9717))
+* adds release-it config ([20375dc](https://github.com/piscis/nitro-web-redirect/commit/20375dc98e60e03d9b73b80d3b71d4de8ea1a920))
+* adds renovate config ([efe9a50](https://github.com/piscis/nitro-web-redirect/commit/efe9a5060298ffc79184c1fc3088037c140ae603))
+* eslint ignore .env and .nitro directories ([051d610](https://github.com/piscis/nitro-web-redirect/commit/051d6104b4d5ff24d8daf30f2ded51d0d420c00f))
+* extend docker build and push step ([095585f](https://github.com/piscis/nitro-web-redirect/commit/095585fc21be803a02210c5d42f66b8594ee2178))
+* extend docker ignore file with build and github actions ([e59f99f](https://github.com/piscis/nitro-web-redirect/commit/e59f99f4c878a9d0d33200863d3b1ad0e1b90511))
+* license MIT ([638e20e](https://github.com/piscis/nitro-web-redirect/commit/638e20ec16bf1556003c894bed7bc67d79c5f66d))
+* setup pnpm config ([2228fdc](https://github.com/piscis/nitro-web-redirect/commit/2228fdc2ddacd55e2ce82b2b585f05b98636bb62))
+* use actions for node setup ([768f77e](https://github.com/piscis/nitro-web-redirect/commit/768f77eb6c08386b70a0cb1a2da74fd212c08d8b))
 
 
 ### Bug Fixes
 
-* fix pnpm build step ([b62dc6b](https://github.com/piscis/nitro-web-redirect/commit/b62dc6bd1f1e3db47523a14b438585e94f167730))
-* formating issues ([bc962d9](https://github.com/piscis/nitro-web-redirect/commit/bc962d958766cabedbf8dcc498abbec1d75236a0))
+* fix pnpm build step ([c87606e](https://github.com/piscis/nitro-web-redirect/commit/c87606ecaad498c1fe334516063270243295f60b))
+* formating issues ([d317f09](https://github.com/piscis/nitro-web-redirect/commit/d317f096effdb2f836404531ec115d8186c1a164))
 
 ## 1.0.0 (2024-02-01)
 
 
 ### Features
 
-* add docker build file ([4f3561e](https://github.com/piscis/nitro-web-redirect/commit/4f3561e9df50ee82a864173ea2d932d7e4c5d83a))
-* add docker publish image build step ([bbf144e](https://github.com/piscis/nitro-web-redirect/commit/bbf144e5b7df604d3ab749b7cafb2672bb5c9f21))
-* add docu for docker build image ([9e04f24](https://github.com/piscis/nitro-web-redirect/commit/9e04f2496e5292c7ad57dbc112653bd8975b84b0))
-* add dummy teststep ([ae3ea33](https://github.com/piscis/nitro-web-redirect/commit/ae3ea33387eb6477047077e3b7c698ff2e1fa9c2))
-* add github build actions ([bfbd216](https://github.com/piscis/nitro-web-redirect/commit/bfbd21692b7a8dd8c28188d0dc95789fa768a28e))
-* adds basic release config ([952f20a](https://github.com/piscis/nitro-web-redirect/commit/952f20a4cc7c553fd6294afcf5cc2f66e92b1f3a))
-* adds editorconfig ([48e4500](https://github.com/piscis/nitro-web-redirect/commit/48e4500996ee15cd163ed6f815a842a2c9f64212))
-* adds eslint configuration ([b40bb6b](https://github.com/piscis/nitro-web-redirect/commit/b40bb6b2178b550e6b0cc7964b7710d5006e88c0))
-* adds example for enviroment config ([e4a4398](https://github.com/piscis/nitro-web-redirect/commit/e4a43984dd8e39121697b50905d148521e6315b4))
-* adds gitignore config ([1db5c11](https://github.com/piscis/nitro-web-redirect/commit/1db5c11b298707ffabfd175d4a38374d96333675))
-* adds nitro configuration ([ad69537](https://github.com/piscis/nitro-web-redirect/commit/ad695370b5f6a5db36f74931e75c958db21a1a0d))
-* adds pnpm package configuration ([0bb2156](https://github.com/piscis/nitro-web-redirect/commit/0bb2156e813c99855afb4945101db13b897afdaf))
-* adds redirect routing ([4d47789](https://github.com/piscis/nitro-web-redirect/commit/4d477893cab0f1defc74562d462c0be4d21203b3))
-* adds release-it config ([04c3b35](https://github.com/piscis/nitro-web-redirect/commit/04c3b35c458694be43f748fc337fb37f3b857e01))
-* adds renovate config ([96778ee](https://github.com/piscis/nitro-web-redirect/commit/96778eed5decaf290a551fa2d097ec88d5d98333))
-* eslint ignore .env and .nitro directories ([7a1160d](https://github.com/piscis/nitro-web-redirect/commit/7a1160d9ac907462203eb84dbf8894b3fb3c9de1))
-* extend docker build and push step ([eeb4af5](https://github.com/piscis/nitro-web-redirect/commit/eeb4af55981e8b3a52f75d19ff70760789ad43e3))
-* extend docker ignore file with build and github actions ([427e806](https://github.com/piscis/nitro-web-redirect/commit/427e806f559c6301e3487fb78203b6faf967eb45))
-* license MIT ([ab4abdc](https://github.com/piscis/nitro-web-redirect/commit/ab4abdc0e510c2ce1cb0f9b6096a5c503884e1b4))
-* setup pnpm config ([aed7b89](https://github.com/piscis/nitro-web-redirect/commit/aed7b898be1d7ea0323ea7796e5b1f4f507268e3))
-* use actions for node setup ([9bf9abf](https://github.com/piscis/nitro-web-redirect/commit/9bf9abf74aa3cd63902d009852fcd991b71ab585))
+* add docker build file ([275cba0](https://github.com/piscis/nitro-web-redirect/commit/275cba0348130c0e59b1948bd31752590b63a843))
+* add docker publish image build step ([d7d7062](https://github.com/piscis/nitro-web-redirect/commit/d7d7062858579f070590d7d58ca5398c5a74b9e5))
+* add docu for docker build image ([62e8eae](https://github.com/piscis/nitro-web-redirect/commit/62e8eae54c0999c97e780ff90ed73405c8492bc1))
+* add dummy teststep ([0fc7e48](https://github.com/piscis/nitro-web-redirect/commit/0fc7e48af8851d4ef634d80968055df78ce886bf))
+* add github build actions ([9604430](https://github.com/piscis/nitro-web-redirect/commit/9604430bcab44578a1cd31ce3964574a313c17ed))
+* adds basic release config ([b81e747](https://github.com/piscis/nitro-web-redirect/commit/b81e74712cda3734c30185209712c3fa00d0dfd8))
+* adds editorconfig ([335506b](https://github.com/piscis/nitro-web-redirect/commit/335506bfe9b24ceb3c2f0ee1c75bd2e384d71fa3))
+* adds eslint configuration ([8d2a50d](https://github.com/piscis/nitro-web-redirect/commit/8d2a50d19b3c80e1e146d703148a70ce4f168d1e))
+* adds example for enviroment config ([ffad44b](https://github.com/piscis/nitro-web-redirect/commit/ffad44bb0fe46b7af1c21e77656a96947ade03f5))
+* adds gitignore config ([d9656e8](https://github.com/piscis/nitro-web-redirect/commit/d9656e8afab88c3bf6282a258251836f3215a854))
+* adds nitro configuration ([0249f95](https://github.com/piscis/nitro-web-redirect/commit/0249f951cb38727387eb3020f4bb8354963b9eca))
+* adds pnpm package configuration ([dd659ff](https://github.com/piscis/nitro-web-redirect/commit/dd659ff5d4594ab9fbded2b0af31a9d76dd5a03b))
+* adds redirect routing ([4943231](https://github.com/piscis/nitro-web-redirect/commit/4943231016758d11ac7f70e588e1ef7c296c9717))
+* adds release-it config ([20375dc](https://github.com/piscis/nitro-web-redirect/commit/20375dc98e60e03d9b73b80d3b71d4de8ea1a920))
+* adds renovate config ([efe9a50](https://github.com/piscis/nitro-web-redirect/commit/efe9a5060298ffc79184c1fc3088037c140ae603))
+* eslint ignore .env and .nitro directories ([051d610](https://github.com/piscis/nitro-web-redirect/commit/051d6104b4d5ff24d8daf30f2ded51d0d420c00f))
+* extend docker build and push step ([095585f](https://github.com/piscis/nitro-web-redirect/commit/095585fc21be803a02210c5d42f66b8594ee2178))
+* extend docker ignore file with build and github actions ([e59f99f](https://github.com/piscis/nitro-web-redirect/commit/e59f99f4c878a9d0d33200863d3b1ad0e1b90511))
+* license MIT ([638e20e](https://github.com/piscis/nitro-web-redirect/commit/638e20ec16bf1556003c894bed7bc67d79c5f66d))
+* setup pnpm config ([2228fdc](https://github.com/piscis/nitro-web-redirect/commit/2228fdc2ddacd55e2ce82b2b585f05b98636bb62))
+* use actions for node setup ([768f77e](https://github.com/piscis/nitro-web-redirect/commit/768f77eb6c08386b70a0cb1a2da74fd212c08d8b))
 
 
 ### Bug Fixes
 
-* fix pnpm build step ([b62dc6b](https://github.com/piscis/nitro-web-redirect/commit/b62dc6bd1f1e3db47523a14b438585e94f167730))
-* formating issues ([bc962d9](https://github.com/piscis/nitro-web-redirect/commit/bc962d958766cabedbf8dcc498abbec1d75236a0))
+* fix pnpm build step ([c87606e](https://github.com/piscis/nitro-web-redirect/commit/c87606ecaad498c1fe334516063270243295f60b))
+* formating issues ([d317f09](https://github.com/piscis/nitro-web-redirect/commit/d317f096effdb2f836404531ec115d8186c1a164))
