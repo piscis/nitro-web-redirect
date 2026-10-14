@@ -2,6 +2,8 @@
 
 **Your own worktree:** other agents share this repository and the main checkout is the person's, so before your first edit you work in a linked worktree on your own branch; every change lands on `main` as a pull request with a conventional-commit title, squash-merged once CI is green, and once it merges you remove the worktree and branch you made. Steps, and the sweep for ones others left: `docs/agents/worktrees.md`.
 
+**Releases:** cutting a version, changing the changelog or release tooling, or checking a published image goes by `docs/agents/releasing.md`; the tag push waits for the maintainer's "release vX.Y.Z".
+
 **Public mirror:** the repo is push-mirrored on every commit to the public GitHub repo https://github.com/piscis/nitro-web-redirect. Everything committed is published there, so keep hostnames of private infrastructure, tokens and client names out of commits, docs and PRs. Issues and pull requests live on Forgejo only.
 
 ## Skills

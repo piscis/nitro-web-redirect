@@ -34,6 +34,19 @@ jobs:
         with:
           images: piscis/nitro-web-redirect
 
+      - name: Build Docker image for the smoke test
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: ./Dockerfile
+          load: true
+          push: false
+          tags: nitro-web-redirect:smoke-test
+
+      - name: Smoke test the image
+        shell: bash
+        run: scripts/smoke-test.sh nitro-web-redirect:smoke-test
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
