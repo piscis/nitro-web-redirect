@@ -14,7 +14,7 @@ Several agents work in this repository at once, and the main checkout belongs to
    pnpm -C .claude/worktrees/<slug> install
    ```
 
-   The branch is `<type>/<issue>-<slug>` (`fix/12-preserve-query`), or `<type>/<slug>` with no issue, where `<type>` is the conventional-commit type the pull request's title will carry. The slug is the branch's last segment.
+   The branch is `<type>/<issue>-<slug>` (`fix/12-preserve-query`), or `<type>/<slug>` with no issue, where `<type>` is the conventional-commit type the pull request's title will carry. The slug is the branch's last segment. The one exception is a release branch, `release/vX.Y.Z`: see [releasing.md](./releasing.md#3-release-pull-request).
 
 Done when `git rev-parse --git-dir` names a linked worktree and `git branch --show-current` is a branch no other worktree has checked out.
 

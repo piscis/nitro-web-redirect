@@ -5,7 +5,7 @@ A release turns the conventional-commit titles on `main` into a version bump and
 The moving parts:
 
 - `pnpm release` runs release-it, which takes the bump `@release-it/conventional-changelog` recommends (`fix` → patch, `feat` → minor, `!` or `BREAKING CHANGE` → major), writes the section into `CHANGELOG.md`, bumps `package.json` and commits both locally. It only runs on a `release/*` branch, and it never tags or pushes. `pnpm release:patch|minor|major` override the bump by hand.
-- Changelog links point at the public mirror `https://github.com/piscis/nitro-web-redirect`, because `CHANGELOG.md` is published there (`context` in `.release-it.json`).
+- Compare and commit links in the changelog point at the public mirror `https://github.com/piscis/nitro-web-redirect`, because `CHANGELOG.md` is published there (`context` in `.release-it.json`). Issue and pull request numbers such as `#48` stay plain text, because they live on Forgejo and the mirror has no such pages: the preset's `issuePrefixes` is a lone NUL character (`"\u0000"`), a prefix no commit contains. An empty list would not do, since conventional-changelog then falls back to GitHub's `#` and links the references again.
 - A `v*` tag starts two workflows. On Forgejo, `forgejo-release.yml` creates the Forgejo release with that version's `CHANGELOG.md` section as notes (`scripts/release-notes.ts`). On the GitHub mirror, `publish-docker-image.yml` builds the image, runs `scripts/smoke-test.sh` against it, and only then pushes `piscis/nitro-web-redirect:X.Y.Z`, `:vX.Y.Z` and `:latest`.
 - `scripts/smoke-test.sh <image>` starts the image with `REDIRECT_TARGET=https://example.com`, requests a path with a query string and expects `301` with the matching `Location`. Exit code 0 means the image is good.
 
@@ -27,8 +27,7 @@ Done when both are green on the same commit.
 1. Find the next version: in a worktree on fresh `origin/main`, `pnpm exec release-it --ci --release-version --no-git.requireBranch` prints it and changes nothing.
 2. Create the release worktree off fresh `origin/main` on branch `release/vX.Y.Z` (the one branch name outside the `<type>/<slug>` scheme), slug `release-vX.Y.Z`, and `pnpm install` in it.
 3. Run `pnpm release` there. It prints the changelog section and leaves one local commit `chore(release): vX.Y.Z`.
-4. Read the new section against the merged pull requests since the last tag. Add by hand what a squash folded away, under the matching heading, linking the commit that carries it, then `git commit --amend --no-edit`.
-   - **v2.0.0**: #48 folded two `fix:` commits into its `feat!` commit. Add under `### Bug Fixes`: the target counts as having a protocol only on `^https?://` (so a host like `httpbin.org` is no longer taken for one), and trailing slashes on the target are trimmed. Link both to `89bff79`.
+4. Check the generated section against the merged pull requests since the last tag, and add the entries a squash folded away: under the matching heading, linking the commit that carries them, then `git commit --amend --no-edit`. The release ticket lists any such entries.
 5. `pnpm lint` (run `pnpm lint:fix` and amend if the generated Markdown trips it), `pnpm test:run`, push, and open `chore(release): vX.Y.Z` with a body that lists the section and says `Refs #<release ticket>`. Squash-merge once green.
 
 Done when `chore(release): vX.Y.Z (#<n>)` is on `origin/main`, `package.json` there says `X.Y.Z`, and `CHANGELOG.md` there opens with the `X.Y.Z` section. Clean up the worktree and branch as in [worktrees.md](./worktrees.md#after-the-merge).
