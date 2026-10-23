@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1](https://github.com/piscis/nitro-web-redirect/compare/v2.0.0...v2.0.1) (2026-10-23)
+
+### Bug Fixes
+
+* **deps:** the Docker image runs on Node.js 24.22 (`node:24.22.0-alpine`), along with non-major updates of the build tooling (#57) ([195e59a](https://github.com/piscis/nitro-web-redirect/commit/195e59a5492d45a7cc28f4378d778f37bf1a9c0a))
+
 ## [2.0.0](https://github.com/piscis/nitro-web-redirect/compare/v1.9.0...v2.0.0) (2026-10-14)
 
 ### ⚠ BREAKING CHANGES
