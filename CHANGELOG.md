@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.0](https://github.com/piscis/nitro-web-redirect/compare/v2.0.1...v2.1.0) (2026-10-23)
+
+### Features
+
+* publish multi-arch Docker images for amd64 and arm64 (#64) ([43af47a](https://github.com/piscis/nitro-web-redirect/commit/43af47a92cbc11e1cbb1b71461ec868c7cc2bd02))
+
+### Bug Fixes
+
+* start the image with node instead of pnpm via corepack (#66) ([339ecde](https://github.com/piscis/nitro-web-redirect/commit/339ecded898a97c5580b0d7f16b5ed6e443e70ed))
+
 ## [2.0.1](https://github.com/piscis/nitro-web-redirect/compare/v2.0.0...v2.0.1) (2026-10-23)
 
 ### Bug Fixes
