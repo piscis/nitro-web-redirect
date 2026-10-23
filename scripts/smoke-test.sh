@@ -2,6 +2,7 @@
 # Smoke test for a built image: start it with REDIRECT_TARGET=https://example.com,
 # request a path with a query string, expect a 301 to the matching Location.
 # Usage: scripts/smoke-test.sh <image> [host port, default 3939]
+# DOCKER_DEFAULT_PLATFORM (e.g. linux/arm64) picks the platform to run; fails if the image lacks it.
 set -euo pipefail
 
 image="${1:?usage: scripts/smoke-test.sh <image> [port]}"

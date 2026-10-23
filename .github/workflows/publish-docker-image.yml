@@ -42,24 +42,52 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
 
-      - name: Build Docker image for the smoke test
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      # Each platform is loaded and smoke-tested on its own before anything is
+      # pushed; the push below runs on the same builder and reuses their cache.
+      - name: Build linux/amd64 image for the smoke test
         uses: docker/build-push-action@v7
         with:
           context: .
           file: ./Dockerfile
+          platforms: linux/amd64
           load: true
           push: false
-          tags: nitro-web-redirect:smoke-test
+          tags: nitro-web-redirect:smoke-test-amd64
 
-      - name: Smoke test the image
+      - name: Smoke test the linux/amd64 image
         shell: bash
-        run: scripts/smoke-test.sh nitro-web-redirect:smoke-test
+        env:
+          DOCKER_DEFAULT_PLATFORM: linux/amd64
+        run: scripts/smoke-test.sh nitro-web-redirect:smoke-test-amd64
+
+      - name: Build linux/arm64 image for the smoke test
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/arm64
+          load: true
+          push: false
+          tags: nitro-web-redirect:smoke-test-arm64
+
+      - name: Smoke test the linux/arm64 image
+        shell: bash
+        env:
+          DOCKER_DEFAULT_PLATFORM: linux/arm64
+        run: scripts/smoke-test.sh nitro-web-redirect:smoke-test-arm64
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
           context: .
           file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

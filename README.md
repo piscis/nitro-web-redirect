@@ -18,7 +18,7 @@ A lightweight Nitro.js application that redirects all incoming requests to a spe
 - Configurable redirect status code: 301, 302, 303, 307 or 308
 - Keeps the requested path and query string, with an optional base path on the target
 - Validates its configuration at startup and refuses to start if it is invalid
-- Available as a Docker image
+- Available as a Docker image for `linux/amd64` and `linux/arm64`
 
 ## Quick Start
 
@@ -114,7 +114,7 @@ REDIRECT_STATUS_CODE=302
 
 ### Using Pre-built Image from Docker Hub
 
-The official Docker image is available on Docker Hub:
+The official Docker image is available on Docker Hub for `linux/amd64` and `linux/arm64`. Every tag covers both platforms, and Docker pulls the one that fits the host:
 
 ```bash
 docker pull piscis/nitro-web-redirect:latest
