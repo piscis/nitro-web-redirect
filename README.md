@@ -163,7 +163,7 @@ services:
 ### Prerequisites
 
 - Node.js 24 (see `.nvmrc`)
-- pnpm 12.11.2 (pinned in `package.json`; `corepack enable` picks it up)
+- pnpm 12 (see `packageManager` in `package.json`; `corepack enable` picks it up)
 
 ### Setup
 
