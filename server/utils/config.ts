@@ -35,7 +35,10 @@ export function loadConfig(env: Record<string, string | undefined>): Configurati
   if (target === undefined || UNSET_TARGETS.has(target))
     throw new Error('REDIRECT_TARGET is not set: give the host to redirect to, e.g. REDIRECT_TARGET=https://example.com')
 
-  return { target: parseTarget(target), statusCode: parseStatusCode(env.REDIRECT_STATUS_CODE) }
+  return {
+    target: parseTarget(target),
+    statusCode: parseStatusCode(env.REDIRECT_STATUS_CODE),
+  }
 }
 
 function parseTarget(value: string): RedirectTarget {
@@ -45,7 +48,11 @@ function parseTarget(value: string): RedirectTarget {
   const pathStart = rest.indexOf('/')
   return pathStart === -1
     ? { protocol, host: rest, basePath: '' }
-    : { protocol, host: rest.slice(0, pathStart), basePath: rest.slice(pathStart) }
+    : {
+        protocol,
+        host: rest.slice(0, pathStart),
+        basePath: rest.slice(pathStart),
+      }
 }
 
 function parseStatusCode(value: string | undefined): RedirectStatusCode {

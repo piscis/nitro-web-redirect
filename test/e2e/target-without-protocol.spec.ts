@@ -17,7 +17,9 @@ describe('the built server with a redirect target without protocol and status co
   })
 
   it('honours X-Forwarded-Proto when taking the protocol from the request', async () => {
-    const { headers } = await $fetchRaw('/foo', { headers: { 'x-forwarded-proto': 'https' } })
+    const { headers } = await $fetchRaw('/foo', {
+      headers: { 'x-forwarded-proto': 'https' },
+    })
     expect(headers.get('location')).toBe('https://example.com/foo')
   })
 })

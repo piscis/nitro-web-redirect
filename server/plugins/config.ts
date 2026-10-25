@@ -12,7 +12,10 @@ export default definePlugin(() => {
     logger.info(`Redirecting to ${protocol}${host}${basePath} with ${config.statusCode}`)
   }
   catch (error) {
-    logger.error(`Invalid configuration: ${error instanceof Error ? error.message : String(error)}`)
+    const message = error instanceof Error
+      ? error.message
+      : String(error)
+    logger.error(`Invalid configuration: ${message}`)
     process.exit(1)
   }
 })

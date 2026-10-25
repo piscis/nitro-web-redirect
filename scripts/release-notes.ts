@@ -11,7 +11,10 @@ export function releaseNotes(changelog: string, version: string): string {
   if (start === -1)
     throw new Error(`CHANGELOG.md has no section for ${bare}`)
   const end = lines.findIndex((line, index) => index > start && line.startsWith('## '))
-  return lines.slice(start + 1, end === -1 ? undefined : end).join('\n').trim()
+  const stop = end === -1
+    ? undefined
+    : end
+  return lines.slice(start + 1, stop).join('\n').trim()
 }
 
 // Usage: node scripts/release-notes.ts v2.0.0 > notes.md
