@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.2](https://github.com/piscis/nitro-web-redirect/compare/v2.1.1...v2.1.2) (2026-11-07)
+
+### Bug Fixes
+
+* **ci:** set up Node without the pnpm cache in the release workflow (#70) ([d8eadae](https://github.com/piscis/nitro-web-redirect/commit/d8eadaea0b8b52e4047210b7998cfd079ce26705))
+* **deps:** Node.js 26 is now required (`engines.node` `>=26`); the Docker image runs on Node.js 26.13.0 (`node:26.13.0-alpine`) (#74) ([23c2d98](https://github.com/piscis/nitro-web-redirect/commit/23c2d987176ac0d905a50c71f058a5d75d29bed5))
+* **deps:** Nitro moves from beta to rc (`3.0.260903-beta` → `3.0.261103-rc`), with nitro-test-utils v4 (#77) ([33a7821](https://github.com/piscis/nitro-web-redirect/commit/33a7821dd8cdfc4d6d40a7f7cb0b478bf3c94a0a))
+
 ## [2.1.1](https://github.com/piscis/nitro-web-redirect/compare/v2.1.0...v2.1.1) (2026-10-25)
 
 ### Bug Fixes
