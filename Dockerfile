@@ -1,8 +1,8 @@
-FROM node:24.22.1-alpine AS base
+FROM node:26.13.0-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN apk --no-cache add curl wget
-RUN corepack enable
+RUN npm install -g corepack@0.36.0 && corepack enable
 COPY . /app
 WORKDIR /app
 

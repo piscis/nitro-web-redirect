@@ -162,7 +162,7 @@ services:
 
 ### Prerequisites
 
-- Node.js 24 (see `.nvmrc`)
+- Node.js 26 (see `.nvmrc`)
 - pnpm 12 (see `packageManager` in `package.json`; `corepack enable` picks it up)
 
 ### Setup
