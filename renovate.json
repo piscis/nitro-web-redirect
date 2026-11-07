@@ -3,9 +3,11 @@
   "timezone": "Europe/Berlin",
   "enabled": true,
   "schedule": [
-    "every 30 day"
+    "* * 1-3 * *"
   ],
-  "automergeSchedule": "every 30 days",
+  "automergeSchedule": [
+    "* * 1-3 * *"
+  ],
   "minimumReleaseAge": "1 day",
   "extends": [
     "github>nuxt/renovate-config-nuxt",
@@ -18,5 +20,89 @@
   ],
   "baseBranchPatterns": [
     "main"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "The corepack version the Dockerfile installs before `corepack enable`",
+      "managerFilePatterns": [
+        "/^Dockerfile$/"
+      ],
+      "matchStrings": [
+        "npm install -g corepack@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "corepack",
+      "datasourceTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "description": "The Node.js major the README names under Requirements",
+      "managerFilePatterns": [
+        "/^README\\.md$/"
+      ],
+      "matchStrings": [
+        "- Node\\.js (?<currentValue>\\d+) \\(see `\\.nvmrc`\\)"
+      ],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node-version",
+      "versioningTemplate": "node"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "engines.node moves with the other Node.js references (the nuxt preset turns it off)",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "engines"
+      ],
+      "matchDepNames": [
+        "node"
+      ],
+      "enabled": true
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "engines"
+      ],
+      "matchDepNames": [
+        "node"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "enabled": false,
+      "description": "... on majors only: a patch would bump the lower bound to every new Node.js release"
+    },
+    {
+      "description": "One pull request for every Node.js reference: .nvmrc, the Dockerfile base image, engines.node and the README",
+      "matchDepNames": [
+        "node"
+      ],
+      "groupName": "Node.js",
+      "groupSlug": "node"
+    },
+    {
+      "description": "Nitro v3 ships as exactly pinned prereleases (3.0.<date>-beta, -rc); by default Renovate only moves a prerelease within its own major.minor.patch, so it never offered the rc",
+      "matchPackageNames": [
+        "nitro"
+      ],
+      "ignoreUnstable": false
+    },
+    {
+      "description": "nitro-test-utils majors follow Nitro's prereleases (v4 needs the rc), so the two move together; a Nitro prerelease bump counts as a patch but may break, so it waits for review",
+      "matchPackageNames": [
+        "nitro",
+        "nitro-test-utils"
+      ],
+      "groupName": "nitro",
+      "groupSlug": "nitro",
+      "automerge": false
+    }
   ]
 }

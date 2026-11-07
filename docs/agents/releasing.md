@@ -51,7 +51,7 @@ git push origin vX.Y.Z
 
 The tag goes on the `chore(release)` merge commit on `main`, which is where `CHANGELOG.md` holds the section. The mirror receives the tag with the next push mirror run.
 
-Done when `git ls-remote --tags origin vX.Y.Z` names that commit.
+Done when `git ls-remote --tags origin 'vX.Y.Z*'` names that commit on its `refs/tags/vX.Y.Z^{}` line. The `refs/tags/vX.Y.Z` line above it carries the annotated tag object's own SHA, not the commit's, and without the `*` that line is all `ls-remote` prints.
 
 ## 5. Verify production
 
