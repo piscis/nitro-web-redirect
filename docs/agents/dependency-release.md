@@ -31,10 +31,9 @@ Renovate opens its own pull requests only on days 1–3 of the month (`schedule`
   step 4 of [releasing.md](./releasing.md#4-tag-maintainers-go). You stop at the merged
   `chore(release)` commit and ask.
 - **Workflow.** CLAUDE.md's Workflow rules hold for every step: a linked worktree per
-  [worktrees.md](./worktrees.md), Node through `fnm`, one squash-merged pull request per
-  change. Run every pnpm command as `corepack pnpm …`: a bare `pnpm` on this machine is an
-  old Homebrew build that cannot read `pnpm-workspace.yaml`, while corepack honours
-  `packageManager` in `package.json`.
+  [worktrees.md](./worktrees.md), one squash-merged pull request per change. `node` and
+  `pnpm` come from proto's shims and resolve the version each worktree pins, so plain
+  `pnpm` is correct everywhere and nothing needs activating per shell.
 - **Public mirror.** Everything committed reaches the public GitHub mirror. Keep the
   Forgejo host, tokens and client names out of commits, pull request bodies and the
   changelog, and merge with `--message ""` so no `Reviewed-on:` URL lands on `main`.
@@ -115,25 +114,26 @@ One branch per unit from step 2, each off fresh `origin/main`, named
 
 ```bash
 git worktree add -b chore/deps-<date>-<slug> .claude/worktrees/deps-<date>-<slug> origin/main
-cd .claude/worktrees/deps-<date>-<slug> && eval "$(fnm env)" && fnm use && corepack pnpm install
+cd .claude/worktrees/deps-<date>-<slug> && pnpm install
 ```
 
 Record the baseline audit from the first worktree before editing anything:
-`corepack pnpm audit --json > /tmp/audit-base-<date>.json`. Then, per unit:
+`pnpm audit --json > /tmp/audit-base-<date>.json`. Then, per unit:
 
 - Edit the file Renovate detected the dependency in, keeping the existing range style
   (`^x.y.z`, or an exact pin for `nitro`). A `pnpm` bump moves `packageManager` in
   `package.json`.
-- Lock file maintenance is `rm pnpm-lock.yaml && corepack pnpm install --lockfile-only`,
-  then `corepack pnpm install`. No manifest file changes.
-- Run `corepack pnpm install`. If pnpm rejects a version as too young, drop that update
-  from this run.
+- Lock file maintenance is `rm pnpm-lock.yaml && pnpm install --lockfile-only`, then
+  `pnpm install`. No manifest file changes.
+- Run `pnpm install --strict-peer-dependencies`. If pnpm rejects a version as too young,
+  drop that update from this run; if it names an unmet peer, say so in the pull request
+  ([issue-tracker.md](./issue-tracker.md#pull-requests)).
 - If install leaves auto-installed peers stale, delete **both** `pnpm-lock.yaml` and
   `node_modules` and install again. Deleting only the lockfile rebuilds it from
   `node_modules/.pnpm/lock.yaml`.
 
 Commit with the dashboard entry's title (for example
-`chore(deps): update all non-major dependencies`). Then run `corepack pnpm audit --json` again,
+`chore(deps): update all non-major dependencies`). Then run `pnpm audit --json` again,
 compare against the baseline, and note any new advisory in the pull request body.
 
 Done when: every branch installs cleanly with no age rejections, and `git diff --stat`
@@ -141,12 +141,12 @@ against `origin/main` shows only the files you meant to change.
 
 ### 4. Verify locally
 
-On each branch, through `eval "$(fnm env)" && fnm use`:
+On each branch:
 
 ```bash
-corepack pnpm lint
-corepack pnpm test:run
-corepack pnpm build
+pnpm lint
+pnpm test:run
+pnpm build
 ```
 
 `test:run`, not `test`: the bare script watches on a terminal. These three are

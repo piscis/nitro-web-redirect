@@ -11,10 +11,10 @@ Several agents work in this repository at once, and the main checkout belongs to
    ```bash
    git fetch origin
    git worktree add -b <branch> .claude/worktrees/<slug> origin/main
-   cd .claude/worktrees/<slug> && eval "$(fnm env)" && fnm use && pnpm install
+   cd .claude/worktrees/<slug> && pnpm install
    ```
 
-   `fnm use` switches to the Node.js version in `.nvmrc`; without it pnpm runs under whatever Node the shell started with. Every tool call is a fresh shell, so start each command that runs `pnpm` or `node` with `eval "$(fnm env)" && fnm use`.
+   `node` and `pnpm` come from proto, whose shims are on `PATH`. Each resolves the version the directory pins — `.nvmrc` for Node.js, `packageManager` in `package.json` for pnpm — and installs it on first use. So plain `node` and `pnpm` are correct in every worktree, and a fresh shell per tool call needs nothing activated. If one of them reports `command not found`, the shell is missing `$PROTO_HOME/shims` on `PATH`: report that, rather than reaching for another Node.js.
 
    The branch is `<type>/<issue>-<slug>` (`fix/12-preserve-query`), or `<type>/<slug>` with no issue, where `<type>` is the conventional-commit type the pull request's title will carry. The slug is the branch's last segment. The one exception is a release branch, `release/vX.Y.Z`: see [releasing.md](./releasing.md#3-release-pull-request).
 
