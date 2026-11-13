@@ -14,7 +14,7 @@ Several agents work in this repository at once, and the main checkout belongs to
    cd .claude/worktrees/<slug> && pnpm install
    ```
 
-   `node` and `pnpm` come from proto, whose shims are on `PATH`. Each resolves the version the directory pins — `.nvmrc` for Node.js, `packageManager` in `package.json` for pnpm — and installs it on first use. So plain `node` and `pnpm` are correct in every worktree, and a fresh shell per tool call needs nothing activated. If one of them reports `command not found`, the shell is missing `$PROTO_HOME/shims` on `PATH`: report that, rather than reaching for another Node.js.
+   `node` and `pnpm` have to resolve the versions the repository pins — `.nvmrc` for Node.js, `packageManager` in `package.json` for pnpm. Which version manager puts them there is the machine's business, not the repository's: the shell these agents run in has one whose shims are on `PATH` and which reads both files, so plain `node` and `pnpm` are correct in every worktree, and a fresh shell per tool call needs nothing activated. If either reports `command not found`, or `node --version` disagrees with `.nvmrc`, report that rather than reaching for another Node.js.
 
    The branch is `<type>/<issue>-<slug>` (`fix/12-preserve-query`), or `<type>/<slug>` with no issue, where `<type>` is the conventional-commit type the pull request's title will carry. The slug is the branch's last segment. The one exception is a release branch, `release/vX.Y.Z`: see [releasing.md](./releasing.md#3-release-pull-request).
 

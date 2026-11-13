@@ -166,7 +166,25 @@ services:
 ### Prerequisites
 
 - Node.js 26 (see `.nvmrc`)
-- pnpm 12 (see `packageManager` in `package.json`; proto and corepack both pick it up)
+- pnpm 12 (see `packageManager` in `package.json`)
+
+### Toolchain
+
+What matters is the two versions, not how you get them: Node.js from `.nvmrc` and pnpm
+from `packageManager` in `package.json`. Nothing in the repository binds you to a version
+manager — there is no `.prototools`, `.tool-versions` or Volta pin to keep in sync — so
+pick whichever of these you already have, or none:
+
+```bash
+proto install node && proto install pnpm   # https://moonrepo.dev/docs/proto/install
+fnm use && corepack enable                 # or nvm use, asdf install, …
+corepack enable                            # a system Node.js 26 already in place
+```
+
+Each of those reads the pins above rather than a file of its own. With a manager's shims
+on `PATH`, plain `node` and `pnpm` resolve the version this directory pins; `node
+--version` against `.nvmrc` and `pnpm --version` against `packageManager` are the only
+check that matters.
 
 ### Setup
 

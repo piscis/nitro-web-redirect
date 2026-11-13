@@ -31,9 +31,9 @@ Renovate opens its own pull requests only on days 1–3 of the month (`schedule`
   step 4 of [releasing.md](./releasing.md#4-tag-maintainers-go). You stop at the merged
   `chore(release)` commit and ask.
 - **Workflow.** CLAUDE.md's Workflow rules hold for every step: a linked worktree per
-  [worktrees.md](./worktrees.md), one squash-merged pull request per change. `node` and
-  `pnpm` come from proto's shims and resolve the version each worktree pins, so plain
-  `pnpm` is correct everywhere and nothing needs activating per shell.
+  [worktrees.md](./worktrees.md), one squash-merged pull request per change. The shell's
+  `node` and `pnpm` already resolve the version each worktree pins, so plain `pnpm` is
+  correct everywhere and nothing needs activating per shell.
 - **Public mirror.** Everything committed reaches the public GitHub mirror. Keep the
   Forgejo host, tokens and client names out of commits, pull request bodies and the
   changelog, and merge with `--message ""` so no `Reviewed-on:` URL lands on `main`.
