@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/piscis/nitro-web-redirect/compare/v2.1.3...v2.2.0) (2026-11-13)
+
+### Features
+
+* **dev:** take the development configuration from Phase (#91) ([1d456f6](https://github.com/piscis/nitro-web-redirect/commit/1d456f6f357ead16333e49509ac6894237d9b3fd))
+
+### Dependencies
+
+* **deps:** the Docker image runs on Node.js 26.13.1 (`node:26.13.1-alpine`) (#94) ([722a5ff](https://github.com/piscis/nitro-web-redirect/commit/722a5ff633543f68214803fc6846c1fee196e9dd))
+* **deps:** non-major build tooling updates: dotenv 18.0.10, rolldown 1.3.2 (#93) ([e749936](https://github.com/piscis/nitro-web-redirect/commit/e749936ce9e78f37eaa520115ef6b605b620fa3c))
+* **deps:** lock file maintenance, transitive updates only (#95) ([286faaa](https://github.com/piscis/nitro-web-redirect/commit/286faaabdbe36d90d09833da630583f62c54d17e))
+
 ## [2.1.3](https://github.com/piscis/nitro-web-redirect/compare/v2.1.2...v2.1.3) (2026-11-13)
 
 No change to the redirect service itself: this release records agent and CI tooling changes only, and the image is functionally identical to 2.1.2.
