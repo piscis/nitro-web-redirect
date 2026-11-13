@@ -13,5 +13,5 @@
   "disableWorkflows": true,
   "disableBundledSkills": true,
   "disableArtifacts": true,
-  "enabledMcpjsonServers": ["forgejo", "context7"]
+  "enabledMcpjsonServers": ["context7"]
 }
