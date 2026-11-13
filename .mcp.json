@@ -6,6 +6,11 @@
       "headers": {
         "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
       }
+    },
+    "forgejo": {
+      "type": "stdio",
+      "command": "scripts/forgejo-mcp.sh",
+      "args": []
     }
   }
 }

@@ -5,6 +5,8 @@ Issues and specs for this repo live as issues on the self-hosted Forgejo instanc
 - **`fj` (forgejo-cli)** for everyday reads and writes. It is already signed in and infers the repo from `origin` when run inside the clone.
 - **The REST API with `curl` + `jq`** for what `fj` lacks: issue dependencies, CI runs and job logs, and PR lookups by branch.
 
+A third route, for sessions that prefer tool calls over a shell: the **`forgejo` MCP server**, defined in `.mcp.json` and enabled for this repository in `.claude/settings.json`. `scripts/forgejo-mcp.sh` starts it, taking the instance URL from the `origin` remote and the credential from `FORGEJO_ACCESS_TOKEN`; it needs `forgejo-mcp` on `PATH`. The conventions below are written for `fj`, and they hold for the MCP tools too.
+
 The repo is push-mirrored to the public GitHub repo `piscis/nitro-web-redirect` on every commit. GitHub is read-only: issues and pull requests happen on Forgejo only.
 
 ## Calling the API
