@@ -9,6 +9,7 @@ No change to the redirect service itself: this release records agent and CI tool
 * **ai:** the vendored skill set and its lock file are removed; skills now come from the operator's own environment (#83) ([39a4492](https://github.com/piscis/nitro-web-redirect/commit/39a4492c9af3867f4db4b0177cff16ac352cd0d3))
 * **ai:** `CLAUDE.md` no longer documents the removed vendoring workflow (#84) ([fa1d4ed](https://github.com/piscis/nitro-web-redirect/commit/fa1d4ed3169491d1a780cc3e9243c94b1838c462))
 * **ai:** the context7 MCP server is enabled by default; a Forgejo MCP server was added and removed again before this release, leaving `fj` and the REST API as the way to the forge (#85, #88) ([ff6953f](https://github.com/piscis/nitro-web-redirect/commit/ff6953f15870a0d873e59ffa3c3c8b29b015c38d))
+* **agents:** a scheduled dependency and release run is documented for agents (#87) ([631e245](https://github.com/piscis/nitro-web-redirect/commit/631e2452f6961cc2f328d289ca212f5580b8eecf))
 * **ci:** a `wait-ci.sh` timeout counts as a queued run rather than a failure (#82) ([8f60a22](https://github.com/piscis/nitro-web-redirect/commit/8f60a2299ba86162a89b0e5c846c87108b162cb7))
 * **ci:** hardened Renovate config, Node version checks and agent CI tooling (#81) ([75246d1](https://github.com/piscis/nitro-web-redirect/commit/75246d1621375e29f9b30a246e060d26c519892b))
 
