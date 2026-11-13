@@ -4,6 +4,8 @@
 
 **Releases:** cutting a version, changing the changelog or release tooling, or checking a published image goes by `docs/agents/releasing.md`; the tag push waits for the maintainer's "release vX.Y.Z".
 
+**Dependency updates:** a scheduled, unattended run ships the updates Renovate has picked and prepares the next release up to the tag; it follows `docs/agents/dependency-release.md`.
+
 **Public mirror:** the repo is push-mirrored on every commit to the public GitHub repo https://github.com/piscis/nitro-web-redirect. Everything committed is published there, so keep hostnames of private infrastructure, tokens and client names out of commits, docs and PRs. Issues and pull requests live on Forgejo only.
 
 ## Agent conventions
