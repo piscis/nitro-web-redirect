@@ -6,6 +6,8 @@
 
 **Dependency updates:** a scheduled, unattended run ships the updates Renovate has picked and prepares the next release up to the tag; it follows `docs/agents/dependency-release.md`.
 
+**Development configuration:** `REDIRECT_TARGET` and `REDIRECT_STATUS_CODE` for `pnpm dev` and `pnpm preview` come from Phase (`.phase.json` links the app; `pnpm dev:local` reads a `.env` instead). Do not create a `.env` in this repository: an ambient value is exactly what the end-to-end specs guard against with `withConfiguration`.
+
 **Public mirror:** the repo is push-mirrored on every commit to the public GitHub repo https://github.com/piscis/nitro-web-redirect. Everything committed is published there, so keep hostnames of private infrastructure, tokens and client names out of commits, docs and PRs. Issues and pull requests live on Forgejo only.
 
 ## Agent conventions

@@ -43,11 +43,14 @@ cd nitro-web-redirect
 pnpm install
 
 # Configure environment variables
-echo 'REDIRECT_TARGET=example.com' > .env
+cp .env.example .env
 
 # Start the server
-pnpm run dev
+pnpm run dev:local
 ```
+
+Maintainers skip the `.env` step and run `pnpm run dev`, which takes the configuration
+from Phase: see [Development configuration](#development-configuration).
 
 ## Configuration
 
@@ -172,16 +175,46 @@ services:
 pnpm install
 
 # Start development server
-pnpm run dev
+pnpm run dev          # maintainers, configuration from Phase
+pnpm run dev:local    # with a .env of your own
 ```
 
 The development server will be available at http://localhost:3000
 
+### Development configuration
+
+The development server needs `REDIRECT_TARGET`, and the startup check exits if it is
+missing. There are two ways to supply it, and the repository does not carry a `.env`.
+
+**External developers:** `cp .env.example .env`, edit it, and use the `:local` scripts
+(`pnpm run dev:local`, `pnpm run preview:local`). Nitro reads `.env` itself.
+
+**Maintainers:** the Development set lives in [Phase](https://phase.dev), on a
+self-hosted instance. [`.phase.json`](./.phase.json) links this repository to the app and
+holds only opaque identifiers, so it is safe to commit. Ask the maintainer for the host
+URL and an invite to the organisation.
+
+```bash
+brew install phase                 # or https://pkg.phase.dev/install.sh
+phase auth                         # against the self-hosted host
+phase secrets list                 # sanity check: the Development set
+
+pnpm run dev                       # runs through `phase run`
+```
+
+`phase run` spawns its child through `sh -c`, which has no `node_modules/.bin` on `PATH`.
+Inside a pnpm script that does not matter, because pnpm puts it there; calling `phase run`
+straight from a shell, use `pnpm exec <bin>`, and quote the whole command when it takes
+flags of its own (`phase run "pnpm exec nitro dev --port 4000"`) so `phase` does not read
+them as its own.
+
 ### Available Scripts
 
-- `pnpm run dev` - Start development server
+- `pnpm run dev` - Start development server, configuration from Phase
+- `pnpm run dev:local` - Start development server, configuration from `.env`
 - `pnpm run build` - Build for production
-- `pnpm run preview` - Preview production build locally
+- `pnpm run preview` - Preview production build locally, configuration from Phase
+- `pnpm run preview:local` - Preview production build locally, configuration from `.env`
 - `pnpm run lint` - Run linting
 - `pnpm run test` - Run tests in watch mode
 - `pnpm run test:run` - Run tests once
@@ -211,6 +244,8 @@ pnpm run test:run
 ```
 
 Unit tests in `test/unit/` cover the configuration and location rules without a server. The tests in `test/e2e/` build the server and send requests to it in-process with [nitro-test-utils](https://github.com/johannschopplich/nitro-test-utils); each file runs one configuration, because the server reads it once at startup.
+
+Every end-to-end file pins the whole configuration through `withConfiguration`, so the suite gives the same result whatever is in your own environment. Run it plainly, with `pnpm run test:run` — not through `phase run`.
 
 ## Releasing
 

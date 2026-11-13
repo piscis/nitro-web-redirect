@@ -1,0 +1,8 @@
+{
+  "version": "2",
+  "phaseApp": "Private - nitro-web-redirect",
+  "appId": "a4bcd7bf-3a89-40dd-b59d-f75206517eeb",
+  "defaultEnv": "Development",
+  "envId": "f08419ff-3938-49e0-86db-4571417532bd",
+  "monorepoSupport": false
+}
