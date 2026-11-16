@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.1](https://github.com/piscis/nitro-web-redirect/compare/v2.2.0...v2.2.1) (2026-11-16)
+
+No change to the redirect service itself: this release records dependency and tooling updates only, and the image is functionally identical to 2.2.0.
+
+### Dependencies
+
+* **deps:** non-major development tooling updates: eslint 10.15.0, pnpm 12.21.0 (#97) ([7cca3e7](https://github.com/piscis/nitro-web-redirect/commit/7cca3e759cfc5e71c462387b269503a3ecfbebe2))
+
 ## [2.2.0](https://github.com/piscis/nitro-web-redirect/compare/v2.1.3...v2.2.0) (2026-11-13)
 
 ### Features
